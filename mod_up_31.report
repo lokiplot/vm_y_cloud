@@ -1,0 +1,4692 @@
+-- Tool --
+       Tool: 20 - mod_up_to_31
+Description: modified algorithm on subdirs smaller 31-st
+    #Clones: 3264126
+
+-- Versioning --
+ BigCloneEval: Release Version 0.1
+BigCloneBench: Version 1.0 (2016-06-19)
+-- Selected Clones --
+         Min Lines: 10
+         Max Lines: null
+        Min Tokens: 50
+        Max Tokens: null
+  Min Pretty Lines: 10
+  Max Pretty Lines: null
+        Min Judges: null
+    Min Confidence: null
+          Sim Type: BOTH
+Minimum Similarity:
+
+-- Clone Matcher --
+Coverage Matcher.  Coverage Ratio = 0.7, minimum raito is of reference clone: null
+
+-- Clone Types --
+Type-1
+Type-2
+Very-Strongly Type-3: Clone similarity in range [90,100) after pretty-printing and identifier/literal normalization.
+     Strongly Type-3: Clone similarity in range [70, 90) after pretty-printing and identifier/literal normalization.
+   Moderately Type-3: Clone similarity in range [50, 70) after pretty-printing and identifier/literal normalization.
+Weakly Type-3/Type-4: Clone similarity in range [ 0, 50) after pretty-printing and identifier/literal normalization.
+
+================================================================================
+	All Functionalities
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 2508 / 24371 = 0.10290919535513521
+              Type-2: 116 / 3703 = 0.03132595193086687
+      Type-2 (blind): 23 / 262 = 0.08778625954198473
+ Type-2 (consistent): 93 / 3441 = 0.02702702702702703
+Very-Strongly Type-3: 489 / 4019 = 0.12167205772580243
+     Strongly Type-3: 1563 / 10484 = 0.14908431896222815
+    Moderatly Type-3: 1332 / 60999 = 0.021836423547927017
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 378 / 5290 = 0.07145557655954632
+              Type-2: 9 / 3263 = 0.0027581979773214833
+      Type-2 (blind): 0 / 224 = 0.0
+ Type-2 (consistent): 9 / 3039 = 0.0029615004935834156
+Very-Strongly Type-3: 44 / 1820 = 0.024175824175824177
+     Strongly Type-3: 372 / 5852 = 0.063568010936432
+    Moderatly Type-3: 574 / 58084 = 0.009882239515184904
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 2130 / 19081 = 0.11162936952989885
+              Type-2: 107 / 440 = 0.2431818181818182
+      Type-2 (blind): 23 / 38 = 0.6052631578947368
+ Type-2 (consistent): 84 / 402 = 0.208955223880597
+Very-Strongly Type-3: 445 / 2199 = 0.20236471123237834
+     Strongly Type-3: 1191 / 4632 = 0.25712435233160624
+    Moderatly Type-3: 758 / 2915 = 0.2600343053173242
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 454 / 36015 = 0.012605858669998611
+[55,60]: 409 / 12030 = 0.03399833748960931
+[60,65]: 233 / 8771 = 0.02656481587048227
+[65,70]: 236 / 4183 = 0.05641883815443462
+[70,75]: 434 / 3154 = 0.13760304375396323
+[75,80]: 481 / 2180 = 0.22064220183486238
+[80,85]: 264 / 2076 = 0.12716763005780346
+[85,90]: 384 / 3074 = 0.12491867273910215
+[90,95]: 324 / 2248 = 0.14412811387900357
+[95,100]: 165 / 1771 = 0.09316770186335403
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 180 / 35019 = 0.005140066820868671
+[55,60]: 204 / 11258 = 0.018120447681648607
+[60,65]: 106 / 8118 = 0.013057403301305741
+[65,70]: 84 / 3689 = 0.022770398481973434
+[70,75]: 63 / 2381 = 0.02645947081058379
+[75,80]: 148 / 1455 = 0.10171821305841924
+[80,85]: 46 / 1359 = 0.03384841795437822
+[85,90]: 115 / 657 = 0.1750380517503805
+[90,95]: 37 / 1389 = 0.02663786897048236
+[95,100]: 7 / 431 = 0.016241299303944315
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 274 / 996 = 0.2751004016064257
+[55,60]: 205 / 772 = 0.2655440414507772
+[60,65]: 127 / 653 = 0.19448698315467075
+[65,70]: 152 / 494 = 0.3076923076923077
+[70,75]: 371 / 773 = 0.4799482535575679
+[75,80]: 333 / 725 = 0.4593103448275862
+[80,85]: 218 / 717 = 0.30404463040446306
+[85,90]: 269 / 2417 = 0.11129499379395945
+[90,95]: 287 / 859 = 0.3341094295692666
+[95,100]: 158 / 1340 = 0.11791044776119403
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 3384 / 75502 = 0.04482000476808561
+[55,100]: 2930 / 39487 = 0.07420163598146225
+[60,100]: 2521 / 27457 = 0.09181629456969079
+[65,100]: 2288 / 18686 = 0.12244461093867066
+[70,100]: 2052 / 14503 = 0.1414879680066193
+[75,100]: 1618 / 11349 = 0.14256762710370957
+[80,100]: 1137 / 9169 = 0.12400479877849274
+[85,100]: 873 / 7093 = 0.12307909206259693
+[90,100]: 489 / 4019 = 0.12167205772580243
+[95,100]: 165 / 1771 = 0.09316770186335403
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 990 / 65756 = 0.015055660319970802
+[55,100]: 810 / 30737 = 0.02635260435305983
+[60,100]: 606 / 19479 = 0.031110426613275836
+[65,100]: 500 / 11361 = 0.044010210368805563
+[70,100]: 416 / 7672 = 0.054223149113660066
+[75,100]: 353 / 5291 = 0.06671706671706672
+[80,100]: 205 / 3836 = 0.05344108446298227
+[85,100]: 159 / 2477 = 0.0641905530884134
+[90,100]: 44 / 1820 = 0.024175824175824177
+[95,100]: 7 / 431 = 0.016241299303944315
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 2394 / 9746 = 0.24563923660989123
+[55,100]: 2120 / 8750 = 0.2422857142857143
+[60,100]: 1915 / 7978 = 0.2400350965154174
+[65,100]: 1788 / 7325 = 0.24409556313993175
+[70,100]: 1636 / 6831 = 0.23949641340945688
+[75,100]: 1265 / 6058 = 0.20881479035985473
+[80,100]: 932 / 5333 = 0.17476092255765985
+[85,100]: 714 / 4616 = 0.1546793760831889
+[90,100]: 445 / 2199 = 0.20236471123237834
+[95,100]: 158 / 1340 = 0.11791044776119403
+
+================================================================================
+Functionality
+  id: 2
+name: Download From Web
+desc: Downloads file from http link.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 1552 = 0.0
+              Type-2: 0 / 9 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 9 = 0.0
+Very-Strongly Type-3: 1 / 22 = 0.045454545454545456
+     Strongly Type-3: 2 / 1401 = 0.0014275517487508922
+    Moderatly Type-3: 0 / 2580 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 98 = 0.0
+              Type-2: 0 / 2 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 2 = 0.0
+Very-Strongly Type-3: 0 / 4 = 0.0
+     Strongly Type-3: 0 / 110 = 0.0
+    Moderatly Type-3: 0 / 2504 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 1454 = 0.0
+              Type-2: 0 / 7 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 7 = 0.0
+Very-Strongly Type-3: 1 / 18 = 0.05555555555555555
+     Strongly Type-3: 2 / 1291 = 0.001549186676994578
+    Moderatly Type-3: 0 / 76 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 1728 = 0.0
+[55,60]: 0 / 498 = 0.0
+[60,65]: 0 / 280 = 0.0
+[65,70]: 0 / 74 = 0.0
+[70,75]: 1 / 51 = 0.0196078431372549
+[75,80]: 0 / 22 = 0.0
+[80,85]: 0 / 27 = 0.0
+[85,90]: 1 / 1301 = 7.686395080707148E-4
+[90,95]: 0 / 16 = 0.0
+[95,100]: 1 / 6 = 0.16666666666666666
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 1708 = 0.0
+[55,60]: 0 / 481 = 0.0
+[60,65]: 0 / 259 = 0.0
+[65,70]: 0 / 56 = 0.0
+[70,75]: 0 / 28 = 0.0
+[75,80]: 0 / 12 = 0.0
+[80,85]: 0 / 8 = 0.0
+[85,90]: 0 / 62 = 0.0
+[90,95]: 0 / 3 = 0.0
+[95,100]: 0 / 1 = 0.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 20 = 0.0
+[55,60]: 0 / 17 = 0.0
+[60,65]: 0 / 21 = 0.0
+[65,70]: 0 / 18 = 0.0
+[70,75]: 1 / 23 = 0.043478260869565216
+[75,80]: 0 / 10 = 0.0
+[80,85]: 0 / 19 = 0.0
+[85,90]: 1 / 1239 = 8.071025020177562E-4
+[90,95]: 0 / 13 = 0.0
+[95,100]: 1 / 5 = 0.2
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 3 / 4003 = 7.494379215588309E-4
+[55,100]: 3 / 2275 = 0.0013186813186813187
+[60,100]: 3 / 1777 = 0.0016882386043894203
+[65,100]: 3 / 1497 = 0.002004008016032064
+[70,100]: 3 / 1423 = 0.0021082220660576245
+[75,100]: 2 / 1372 = 0.0014577259475218659
+[80,100]: 2 / 1350 = 0.0014814814814814814
+[85,100]: 2 / 1323 = 0.0015117157974300832
+[90,100]: 1 / 22 = 0.045454545454545456
+[95,100]: 1 / 6 = 0.16666666666666666
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 2618 = 0.0
+[55,100]: 0 / 910 = 0.0
+[60,100]: 0 / 429 = 0.0
+[65,100]: 0 / 170 = 0.0
+[70,100]: 0 / 114 = 0.0
+[75,100]: 0 / 86 = 0.0
+[80,100]: 0 / 74 = 0.0
+[85,100]: 0 / 66 = 0.0
+[90,100]: 0 / 4 = 0.0
+[95,100]: 0 / 1 = 0.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 3 / 1385 = 0.0021660649819494585
+[55,100]: 3 / 1365 = 0.002197802197802198
+[60,100]: 3 / 1348 = 0.002225519287833828
+[65,100]: 3 / 1327 = 0.002260738507912585
+[70,100]: 3 / 1309 = 0.002291825821237586
+[75,100]: 2 / 1286 = 0.0015552099533437014
+[80,100]: 2 / 1276 = 0.001567398119122257
+[85,100]: 2 / 1257 = 0.0015910898965791568
+[90,100]: 1 / 18 = 0.05555555555555555
+[95,100]: 1 / 5 = 0.2
+
+================================================================================
+Functionality
+  id: 3
+name: Secure Hash
+desc: 1. Generate secure hash in binary format.  2. Convert the binary to a String representation.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 488 = 0.0
+              Type-2: 1 / 142 = 0.007042253521126761
+      Type-2 (blind): 0 / 8 = 0.0
+ Type-2 (consistent): 1 / 134 = 0.007462686567164179
+Very-Strongly Type-3: 0 / 500 = 0.0
+     Strongly Type-3: 1 / 1558 = 6.418485237483953E-4
+    Moderatly Type-3: 1 / 20691 = 4.833019187086173E-5
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 377 = 0.0
+              Type-2: 0 / 112 = 0.0
+      Type-2 (blind): 0 / 8 = 0.0
+ Type-2 (consistent): 0 / 104 = 0.0
+Very-Strongly Type-3: 0 / 459 = 0.0
+     Strongly Type-3: 0 / 1493 = 0.0
+    Moderatly Type-3: 0 / 20638 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 111 = 0.0
+              Type-2: 1 / 30 = 0.03333333333333333
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 1 / 30 = 0.03333333333333333
+Very-Strongly Type-3: 0 / 41 = 0.0
+     Strongly Type-3: 1 / 65 = 0.015384615384615385
+    Moderatly Type-3: 1 / 53 = 0.018867924528301886
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 13371 = 0.0
+[55,60]: 0 / 3740 = 0.0
+[60,65]: 0 / 2614 = 0.0
+[65,70]: 1 / 966 = 0.0010351966873706005
+[70,75]: 0 / 708 = 0.0
+[75,80]: 1 / 304 = 0.003289473684210526
+[80,85]: 0 / 403 = 0.0
+[85,90]: 0 / 143 = 0.0
+[90,95]: 0 / 420 = 0.0
+[95,100]: 0 / 80 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 13352 = 0.0
+[55,60]: 0 / 3737 = 0.0
+[60,65]: 0 / 2602 = 0.0
+[65,70]: 0 / 947 = 0.0
+[70,75]: 0 / 700 = 0.0
+[75,80]: 0 / 282 = 0.0
+[80,85]: 0 / 385 = 0.0
+[85,90]: 0 / 126 = 0.0
+[90,95]: 0 / 386 = 0.0
+[95,100]: 0 / 73 = 0.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 19 = 0.0
+[55,60]: 0 / 3 = 0.0
+[60,65]: 0 / 12 = 0.0
+[65,70]: 1 / 19 = 0.05263157894736842
+[70,75]: 0 / 8 = 0.0
+[75,80]: 1 / 22 = 0.045454545454545456
+[80,85]: 0 / 18 = 0.0
+[85,90]: 0 / 17 = 0.0
+[90,95]: 0 / 34 = 0.0
+[95,100]: 0 / 7 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 2 / 22749 = 8.791595234955383E-5
+[55,100]: 2 / 9378 = 2.1326508850501172E-4
+[60,100]: 2 / 5638 = 3.54735721887194E-4
+[65,100]: 2 / 3024 = 6.613756613756613E-4
+[70,100]: 1 / 2058 = 4.8590864917395527E-4
+[75,100]: 1 / 1350 = 7.407407407407407E-4
+[80,100]: 0 / 1046 = 0.0
+[85,100]: 0 / 643 = 0.0
+[90,100]: 0 / 500 = 0.0
+[95,100]: 0 / 80 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 22590 = 0.0
+[55,100]: 0 / 9238 = 0.0
+[60,100]: 0 / 5501 = 0.0
+[65,100]: 0 / 2899 = 0.0
+[70,100]: 0 / 1952 = 0.0
+[75,100]: 0 / 1252 = 0.0
+[80,100]: 0 / 970 = 0.0
+[85,100]: 0 / 585 = 0.0
+[90,100]: 0 / 459 = 0.0
+[95,100]: 0 / 73 = 0.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 2 / 159 = 0.012578616352201259
+[55,100]: 2 / 140 = 0.014285714285714285
+[60,100]: 2 / 137 = 0.014598540145985401
+[65,100]: 2 / 125 = 0.016
+[70,100]: 1 / 106 = 0.009433962264150943
+[75,100]: 1 / 98 = 0.01020408163265306
+[80,100]: 0 / 76 = 0.0
+[85,100]: 0 / 58 = 0.0
+[90,100]: 0 / 41 = 0.0
+[95,100]: 0 / 7 = 0.0
+
+================================================================================
+Functionality
+  id: 4
+name: Copy File
+desc: Copies a file.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 23 / 13648 = 0.0016852286049237983
+              Type-2: 1 / 3187 = 3.1377470975839345E-4
+      Type-2 (blind): 0 / 218 = 0.0
+ Type-2 (consistent): 1 / 2969 = 3.368137420006736E-4
+Very-Strongly Type-3: 5 / 892 = 0.005605381165919282
+     Strongly Type-3: 4 / 2703 = 0.0014798372179060304
+    Moderatly Type-3: 0 / 16818 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 3133 = 0.0
+              Type-2: 0 / 3063 = 0.0
+      Type-2 (blind): 0 / 215 = 0.0
+ Type-2 (consistent): 0 / 2848 = 0.0
+Very-Strongly Type-3: 2 / 815 = 0.00245398773006135
+     Strongly Type-3: 2 / 2497 = 8.009611533840609E-4
+    Moderatly Type-3: 0 / 16582 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 23 / 10515 = 0.0021873514027579647
+              Type-2: 1 / 124 = 0.008064516129032258
+      Type-2 (blind): 0 / 3 = 0.0
+ Type-2 (consistent): 1 / 121 = 0.008264462809917356
+Very-Strongly Type-3: 3 / 77 = 0.03896103896103896
+     Strongly Type-3: 2 / 206 = 0.009708737864077669
+    Moderatly Type-3: 0 / 236 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 9422 = 0.0
+[55,60]: 0 / 3362 = 0.0
+[60,65]: 0 / 2951 = 0.0
+[65,70]: 0 / 1083 = 0.0
+[70,75]: 0 / 1101 = 0.0
+[75,80]: 2 / 623 = 0.0032102728731942215
+[80,85]: 0 / 674 = 0.0
+[85,90]: 2 / 305 = 0.006557377049180328
+[90,95]: 5 / 636 = 0.007861635220125786
+[95,100]: 0 / 256 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 9335 = 0.0
+[55,60]: 0 / 3298 = 0.0
+[60,65]: 0 / 2902 = 0.0
+[65,70]: 0 / 1047 = 0.0
+[70,75]: 0 / 1046 = 0.0
+[75,80]: 0 / 554 = 0.0
+[80,85]: 0 / 636 = 0.0
+[85,90]: 2 / 261 = 0.007662835249042145
+[90,95]: 2 / 578 = 0.0034602076124567475
+[95,100]: 0 / 237 = 0.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 87 = 0.0
+[55,60]: 0 / 64 = 0.0
+[60,65]: 0 / 49 = 0.0
+[65,70]: 0 / 36 = 0.0
+[70,75]: 0 / 55 = 0.0
+[75,80]: 2 / 69 = 0.028985507246376812
+[80,85]: 0 / 38 = 0.0
+[85,90]: 0 / 44 = 0.0
+[90,95]: 3 / 58 = 0.05172413793103448
+[95,100]: 0 / 19 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 9 / 20413 = 4.4089550776465976E-4
+[55,100]: 9 / 10991 = 8.188517878264034E-4
+[60,100]: 9 / 7629 = 0.0011797090051120724
+[65,100]: 9 / 4678 = 0.001923899102180419
+[70,100]: 9 / 3595 = 0.0025034770514603616
+[75,100]: 9 / 2494 = 0.0036086607858861267
+[80,100]: 7 / 1871 = 0.0037413148049171567
+[85,100]: 7 / 1197 = 0.005847953216374269
+[90,100]: 5 / 892 = 0.005605381165919282
+[95,100]: 0 / 256 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 4 / 19894 = 2.0106564793405046E-4
+[55,100]: 4 / 10559 = 3.7882375224926605E-4
+[60,100]: 4 / 7261 = 5.508883073956756E-4
+[65,100]: 4 / 4359 = 9.176416609314062E-4
+[70,100]: 4 / 3312 = 0.0012077294685990338
+[75,100]: 4 / 2266 = 0.00176522506619594
+[80,100]: 4 / 1712 = 0.002336448598130841
+[85,100]: 4 / 1076 = 0.0037174721189591076
+[90,100]: 2 / 815 = 0.00245398773006135
+[95,100]: 0 / 237 = 0.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 5 / 519 = 0.009633911368015413
+[55,100]: 5 / 432 = 0.011574074074074073
+[60,100]: 5 / 368 = 0.01358695652173913
+[65,100]: 5 / 319 = 0.01567398119122257
+[70,100]: 5 / 283 = 0.0176678445229682
+[75,100]: 5 / 228 = 0.021929824561403508
+[80,100]: 3 / 159 = 0.018867924528301886
+[85,100]: 3 / 121 = 0.024793388429752067
+[90,100]: 3 / 77 = 0.03896103896103896
+[95,100]: 0 / 19 = 0.0
+
+================================================================================
+Functionality
+  id: 5
+name: Decompress zip archive.
+desc: 1. Retrieve a zip archive (from disk, internet, etc).  2. Open the zip file, and iterate through its entries.  3. Decompress the files to disk, preserving their directory structure. Empty directories may or may not be preserved in the output.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 1 / 1 = 1.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 1 / 1 = 1.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 1 / 1 = 1.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 1 / 1 = 1.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 1 / 1 = 1.0
+[55,100]: 1 / 1 = 1.0
+[60,100]: 1 / 1 = 1.0
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 0 = NaN
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 1 / 1 = 1.0
+[55,100]: 1 / 1 = 1.0
+[60,100]: 1 / 1 = 1.0
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 6
+name: Connect to FTP Server
+desc: 1 - Connect to the FTP server.  2 - Log in with user name and password.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 4 = 0.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 9 = 0.0
+     Strongly Type-3: 0 / 32 = 0.0
+    Moderatly Type-3: 0 / 77 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 1 = 0.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 1 = 0.0
+    Moderatly Type-3: 0 / 48 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 3 = 0.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 9 = 0.0
+     Strongly Type-3: 0 / 31 = 0.0
+    Moderatly Type-3: 0 / 29 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 45 = 0.0
+[55,60]: 0 / 14 = 0.0
+[60,65]: 0 / 12 = 0.0
+[65,70]: 0 / 6 = 0.0
+[70,75]: 0 / 18 = 0.0
+[75,80]: 0 / 5 = 0.0
+[80,85]: 0 / 3 = 0.0
+[85,90]: 0 / 6 = 0.0
+[90,95]: 0 / 7 = 0.0
+[95,100]: 0 / 2 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 40 = 0.0
+[55,60]: 0 / 6 = 0.0
+[60,65]: 0 / 2 = 0.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 1 = 0.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 5 = 0.0
+[55,60]: 0 / 8 = 0.0
+[60,65]: 0 / 10 = 0.0
+[65,70]: 0 / 6 = 0.0
+[70,75]: 0 / 17 = 0.0
+[75,80]: 0 / 5 = 0.0
+[80,85]: 0 / 3 = 0.0
+[85,90]: 0 / 6 = 0.0
+[90,95]: 0 / 7 = 0.0
+[95,100]: 0 / 2 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 118 = 0.0
+[55,100]: 0 / 73 = 0.0
+[60,100]: 0 / 59 = 0.0
+[65,100]: 0 / 47 = 0.0
+[70,100]: 0 / 41 = 0.0
+[75,100]: 0 / 23 = 0.0
+[80,100]: 0 / 18 = 0.0
+[85,100]: 0 / 15 = 0.0
+[90,100]: 0 / 9 = 0.0
+[95,100]: 0 / 2 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 49 = 0.0
+[55,100]: 0 / 9 = 0.0
+[60,100]: 0 / 3 = 0.0
+[65,100]: 0 / 1 = 0.0
+[70,100]: 0 / 1 = 0.0
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 69 = 0.0
+[55,100]: 0 / 64 = 0.0
+[60,100]: 0 / 56 = 0.0
+[65,100]: 0 / 46 = 0.0
+[70,100]: 0 / 40 = 0.0
+[75,100]: 0 / 23 = 0.0
+[80,100]: 0 / 18 = 0.0
+[85,100]: 0 / 15 = 0.0
+[90,100]: 0 / 9 = 0.0
+[95,100]: 0 / 2 = 0.0
+
+================================================================================
+Functionality
+  id: 7
+name: Bubble Sort Array
+desc: Sorts an array of values using bubble sort.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 39 = 0.0
+              Type-2: 0 / 4 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 4 = 0.0
+Very-Strongly Type-3: 0 / 21 = 0.0
+     Strongly Type-3: 36 / 207 = 0.17391304347826086
+    Moderatly Type-3: 0 / 1637 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 4 = 0.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 141 = 0.0
+    Moderatly Type-3: 0 / 1532 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 35 = 0.0
+              Type-2: 0 / 4 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 4 = 0.0
+Very-Strongly Type-3: 0 / 21 = 0.0
+     Strongly Type-3: 36 / 66 = 0.5454545454545454
+    Moderatly Type-3: 0 / 105 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 954 = 0.0
+[55,60]: 0 / 359 = 0.0
+[60,65]: 0 / 206 = 0.0
+[65,70]: 0 / 118 = 0.0
+[70,75]: 0 / 73 = 0.0
+[75,80]: 0 / 39 = 0.0
+[80,85]: 6 / 33 = 0.18181818181818182
+[85,90]: 30 / 62 = 0.4838709677419355
+[90,95]: 0 / 10 = 0.0
+[95,100]: 0 / 11 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 904 = 0.0
+[55,60]: 0 / 338 = 0.0
+[60,65]: 0 / 188 = 0.0
+[65,70]: 0 / 102 = 0.0
+[70,75]: 0 / 68 = 0.0
+[75,80]: 0 / 35 = 0.0
+[80,85]: 0 / 22 = 0.0
+[85,90]: 0 / 16 = 0.0
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 50 = 0.0
+[55,60]: 0 / 21 = 0.0
+[60,65]: 0 / 18 = 0.0
+[65,70]: 0 / 16 = 0.0
+[70,75]: 0 / 5 = 0.0
+[75,80]: 0 / 4 = 0.0
+[80,85]: 6 / 11 = 0.5454545454545454
+[85,90]: 30 / 46 = 0.6521739130434783
+[90,95]: 0 / 10 = 0.0
+[95,100]: 0 / 11 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 36 / 1865 = 0.0193029490616622
+[55,100]: 36 / 911 = 0.03951701427003293
+[60,100]: 36 / 552 = 0.06521739130434782
+[65,100]: 36 / 346 = 0.10404624277456648
+[70,100]: 36 / 228 = 0.15789473684210525
+[75,100]: 36 / 155 = 0.23225806451612904
+[80,100]: 36 / 116 = 0.3103448275862069
+[85,100]: 30 / 83 = 0.3614457831325301
+[90,100]: 0 / 21 = 0.0
+[95,100]: 0 / 11 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 1673 = 0.0
+[55,100]: 0 / 769 = 0.0
+[60,100]: 0 / 431 = 0.0
+[65,100]: 0 / 243 = 0.0
+[70,100]: 0 / 141 = 0.0
+[75,100]: 0 / 73 = 0.0
+[80,100]: 0 / 38 = 0.0
+[85,100]: 0 / 16 = 0.0
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 36 / 192 = 0.1875
+[55,100]: 36 / 142 = 0.2535211267605634
+[60,100]: 36 / 121 = 0.2975206611570248
+[65,100]: 36 / 103 = 0.34951456310679613
+[70,100]: 36 / 87 = 0.41379310344827586
+[75,100]: 36 / 82 = 0.43902439024390244
+[80,100]: 36 / 78 = 0.46153846153846156
+[85,100]: 30 / 67 = 0.44776119402985076
+[90,100]: 0 / 21 = 0.0
+[95,100]: 0 / 11 = 0.0
+
+================================================================================
+Functionality
+  id: 8
+name: Setup SGV
+desc: 1 - Create ScrollingGraphicalViewer object. 2 - Inject model.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 3 / 3 = 1.0
+              Type-2: 7 / 7 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 7 / 7 = 1.0
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 5 / 5 = 1.0
+    Moderatly Type-3: 0 / 2 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 4 / 4 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 4 / 4 = 1.0
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 5 / 5 = 1.0
+    Moderatly Type-3: 0 / 2 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 3 / 3 = 1.0
+              Type-2: 3 / 3 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 3 / 3 = 1.0
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 1 = 0.0
+[55,60]: 0 / 1 = 0.0
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 5 / 5 = 1.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 1 = 0.0
+[55,60]: 0 / 1 = 0.0
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 5 / 5 = 1.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 5 / 7 = 0.7142857142857143
+[55,100]: 5 / 6 = 0.8333333333333334
+[60,100]: 5 / 5 = 1.0
+[65,100]: 5 / 5 = 1.0
+[70,100]: 5 / 5 = 1.0
+[75,100]: 5 / 5 = 1.0
+[80,100]: 5 / 5 = 1.0
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 5 / 7 = 0.7142857142857143
+[55,100]: 5 / 6 = 0.8333333333333334
+[60,100]: 5 / 5 = 1.0
+[65,100]: 5 / 5 = 1.0
+[70,100]: 5 / 5 = 1.0
+[75,100]: 5 / 5 = 1.0
+[80,100]: 5 / 5 = 1.0
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 0 = NaN
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 9
+name: Setup SGV Event Handler
+desc: 1-Create scrollinggraphicalviewer, 2-Add listener.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 0 = NaN
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 0 = NaN
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 0 = NaN
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 10
+name: Execute update and rollback.
+desc: 1 - Execute a database update.  2 - Rollback (perhaps conditionally).
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 152 = 0.0
+              Type-2: 0 / 67 = 0.0
+      Type-2 (blind): 0 / 3 = 0.0
+ Type-2 (consistent): 0 / 64 = 0.0
+Very-Strongly Type-3: 0 / 202 = 0.0
+     Strongly Type-3: 0 / 874 = 0.0
+    Moderatly Type-3: 0 / 2335 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 5 = 0.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 1 = 0.0
+     Strongly Type-3: 0 / 16 = 0.0
+    Moderatly Type-3: 0 / 1752 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 147 = 0.0
+              Type-2: 0 / 67 = 0.0
+      Type-2 (blind): 0 / 3 = 0.0
+ Type-2 (consistent): 0 / 64 = 0.0
+Very-Strongly Type-3: 0 / 201 = 0.0
+     Strongly Type-3: 0 / 858 = 0.0
+    Moderatly Type-3: 0 / 583 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 1431 = 0.0
+[55,60]: 0 / 500 = 0.0
+[60,65]: 0 / 246 = 0.0
+[65,70]: 0 / 158 = 0.0
+[70,75]: 0 / 203 = 0.0
+[75,80]: 0 / 155 = 0.0
+[80,85]: 0 / 180 = 0.0
+[85,90]: 0 / 336 = 0.0
+[90,95]: 0 / 144 = 0.0
+[95,100]: 0 / 58 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 1290 = 0.0
+[55,60]: 0 / 313 = 0.0
+[60,65]: 0 / 125 = 0.0
+[65,70]: 0 / 24 = 0.0
+[70,75]: 0 / 5 = 0.0
+[75,80]: 0 / 5 = 0.0
+[80,85]: 0 / 3 = 0.0
+[85,90]: 0 / 3 = 0.0
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 1 = 0.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 141 = 0.0
+[55,60]: 0 / 187 = 0.0
+[60,65]: 0 / 121 = 0.0
+[65,70]: 0 / 134 = 0.0
+[70,75]: 0 / 198 = 0.0
+[75,80]: 0 / 150 = 0.0
+[80,85]: 0 / 177 = 0.0
+[85,90]: 0 / 333 = 0.0
+[90,95]: 0 / 144 = 0.0
+[95,100]: 0 / 57 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 3411 = 0.0
+[55,100]: 0 / 1980 = 0.0
+[60,100]: 0 / 1480 = 0.0
+[65,100]: 0 / 1234 = 0.0
+[70,100]: 0 / 1076 = 0.0
+[75,100]: 0 / 873 = 0.0
+[80,100]: 0 / 718 = 0.0
+[85,100]: 0 / 538 = 0.0
+[90,100]: 0 / 202 = 0.0
+[95,100]: 0 / 58 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 1769 = 0.0
+[55,100]: 0 / 479 = 0.0
+[60,100]: 0 / 166 = 0.0
+[65,100]: 0 / 41 = 0.0
+[70,100]: 0 / 17 = 0.0
+[75,100]: 0 / 12 = 0.0
+[80,100]: 0 / 7 = 0.0
+[85,100]: 0 / 4 = 0.0
+[90,100]: 0 / 1 = 0.0
+[95,100]: 0 / 1 = 0.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 1642 = 0.0
+[55,100]: 0 / 1501 = 0.0
+[60,100]: 0 / 1314 = 0.0
+[65,100]: 0 / 1193 = 0.0
+[70,100]: 0 / 1059 = 0.0
+[75,100]: 0 / 861 = 0.0
+[80,100]: 0 / 711 = 0.0
+[85,100]: 0 / 534 = 0.0
+[90,100]: 0 / 201 = 0.0
+[95,100]: 0 / 57 = 0.0
+
+================================================================================
+Functionality
+  id: 11
+name: Initialize Java Eclipse Project.
+desc: 1-Get eclipse project (create or receive).  2-Set the project's nature to Java (may also set other natures, like plugin).  3-Set classpath.  4-Set output path (bin/).
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 1 / 1 = 1.0
+     Strongly Type-3: 6 / 6 = 1.0
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 2 / 2 = 1.0
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 1 / 1 = 1.0
+     Strongly Type-3: 4 / 4 = 1.0
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 1 / 1 = 1.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 2 / 2 = 1.0
+[85,90]: 3 / 3 = 1.0
+[90,95]: 0 / 0 = NaN
+[95,100]: 1 / 1 = 1.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 1 / 1 = 1.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 1 / 1 = 1.0
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 2 / 2 = 1.0
+[85,90]: 2 / 2 = 1.0
+[90,95]: 0 / 0 = NaN
+[95,100]: 1 / 1 = 1.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 7 / 7 = 1.0
+[55,100]: 7 / 7 = 1.0
+[60,100]: 7 / 7 = 1.0
+[65,100]: 7 / 7 = 1.0
+[70,100]: 7 / 7 = 1.0
+[75,100]: 6 / 6 = 1.0
+[80,100]: 6 / 6 = 1.0
+[85,100]: 4 / 4 = 1.0
+[90,100]: 1 / 1 = 1.0
+[95,100]: 1 / 1 = 1.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 2 / 2 = 1.0
+[55,100]: 2 / 2 = 1.0
+[60,100]: 2 / 2 = 1.0
+[65,100]: 2 / 2 = 1.0
+[70,100]: 2 / 2 = 1.0
+[75,100]: 1 / 1 = 1.0
+[80,100]: 1 / 1 = 1.0
+[85,100]: 1 / 1 = 1.0
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 5 / 5 = 1.0
+[55,100]: 5 / 5 = 1.0
+[60,100]: 5 / 5 = 1.0
+[65,100]: 5 / 5 = 1.0
+[70,100]: 5 / 5 = 1.0
+[75,100]: 5 / 5 = 1.0
+[80,100]: 5 / 5 = 1.0
+[85,100]: 3 / 3 = 1.0
+[90,100]: 1 / 1 = 1.0
+[95,100]: 1 / 1 = 1.0
+
+================================================================================
+Functionality
+  id: 12
+name: Get Prime Factors
+desc: Takes an integer and returns its prime factors.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 4 / 4 = 1.0
+              Type-2: 3 / 3 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 3 / 3 = 1.0
+Very-Strongly Type-3: 3 / 3 = 1.0
+     Strongly Type-3: 19 / 19 = 1.0
+    Moderatly Type-3: 24 / 60 = 0.4
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 1 / 1 = 1.0
+              Type-2: 2 / 2 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 2 / 2 = 1.0
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 10 / 10 = 1.0
+    Moderatly Type-3: 18 / 53 = 0.33962264150943394
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 3 / 3 = 1.0
+              Type-2: 1 / 1 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 1 / 1 = 1.0
+Very-Strongly Type-3: 3 / 3 = 1.0
+     Strongly Type-3: 9 / 9 = 1.0
+    Moderatly Type-3: 6 / 7 = 0.8571428571428571
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 2 / 27 = 0.07407407407407407
+[55,60]: 5 / 16 = 0.3125
+[60,65]: 5 / 5 = 1.0
+[65,70]: 12 / 12 = 1.0
+[70,75]: 10 / 10 = 1.0
+[75,80]: 7 / 7 = 1.0
+[80,85]: 2 / 2 = 1.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 3 / 3 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 2 / 27 = 0.07407407407407407
+[55,60]: 4 / 14 = 0.2857142857142857
+[60,65]: 4 / 4 = 1.0
+[65,70]: 8 / 8 = 1.0
+[70,75]: 6 / 6 = 1.0
+[75,80]: 2 / 2 = 1.0
+[80,85]: 2 / 2 = 1.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 1 / 2 = 0.5
+[60,65]: 1 / 1 = 1.0
+[65,70]: 4 / 4 = 1.0
+[70,75]: 4 / 4 = 1.0
+[75,80]: 5 / 5 = 1.0
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 3 / 3 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 46 / 82 = 0.5609756097560976
+[55,100]: 44 / 55 = 0.8
+[60,100]: 39 / 39 = 1.0
+[65,100]: 34 / 34 = 1.0
+[70,100]: 22 / 22 = 1.0
+[75,100]: 12 / 12 = 1.0
+[80,100]: 5 / 5 = 1.0
+[85,100]: 3 / 3 = 1.0
+[90,100]: 3 / 3 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 28 / 63 = 0.4444444444444444
+[55,100]: 26 / 36 = 0.7222222222222222
+[60,100]: 22 / 22 = 1.0
+[65,100]: 18 / 18 = 1.0
+[70,100]: 10 / 10 = 1.0
+[75,100]: 4 / 4 = 1.0
+[80,100]: 2 / 2 = 1.0
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 18 / 19 = 0.9473684210526315
+[55,100]: 18 / 19 = 0.9473684210526315
+[60,100]: 17 / 17 = 1.0
+[65,100]: 16 / 16 = 1.0
+[70,100]: 12 / 12 = 1.0
+[75,100]: 8 / 8 = 1.0
+[80,100]: 3 / 3 = 1.0
+[85,100]: 3 / 3 = 1.0
+[90,100]: 3 / 3 = 1.0
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 13
+name: Shuffle Array in Place
+desc: Shuffles an array (randomly) in-place.  E.g., Fisher-Yates algorithm.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 3 / 3 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 2 / 2 = 1.0
+     Strongly Type-3: 5 / 5 = 1.0
+    Moderatly Type-3: 6 / 29 = 0.20689655172413793
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 1 / 1 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 2 / 2 = 1.0
+     Strongly Type-3: 1 / 1 = 1.0
+    Moderatly Type-3: 6 / 27 = 0.2222222222222222
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 2 / 2 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 4 / 4 = 1.0
+    Moderatly Type-3: 0 / 2 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 2 / 16 = 0.125
+[55,60]: 0 / 4 = 0.0
+[60,65]: 3 / 4 = 0.75
+[65,70]: 1 / 5 = 0.2
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 5 / 5 = 1.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 2 / 2 = 1.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 2 / 15 = 0.13333333333333333
+[55,60]: 0 / 4 = 0.0
+[60,65]: 3 / 4 = 0.75
+[65,70]: 1 / 4 = 0.25
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 1 / 1 = 1.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 2 / 2 = 1.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 1 = 0.0
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 1 = 0.0
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 4 / 4 = 1.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 13 / 36 = 0.3611111111111111
+[55,100]: 11 / 20 = 0.55
+[60,100]: 11 / 16 = 0.6875
+[65,100]: 8 / 12 = 0.6666666666666666
+[70,100]: 7 / 7 = 1.0
+[75,100]: 7 / 7 = 1.0
+[80,100]: 7 / 7 = 1.0
+[85,100]: 2 / 2 = 1.0
+[90,100]: 2 / 2 = 1.0
+[95,100]: 2 / 2 = 1.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 9 / 30 = 0.3
+[55,100]: 7 / 15 = 0.4666666666666667
+[60,100]: 7 / 11 = 0.6363636363636364
+[65,100]: 4 / 7 = 0.5714285714285714
+[70,100]: 3 / 3 = 1.0
+[75,100]: 3 / 3 = 1.0
+[80,100]: 3 / 3 = 1.0
+[85,100]: 2 / 2 = 1.0
+[90,100]: 2 / 2 = 1.0
+[95,100]: 2 / 2 = 1.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 4 / 6 = 0.6666666666666666
+[55,100]: 4 / 5 = 0.8
+[60,100]: 4 / 5 = 0.8
+[65,100]: 4 / 5 = 0.8
+[70,100]: 4 / 4 = 1.0
+[75,100]: 4 / 4 = 1.0
+[80,100]: 4 / 4 = 1.0
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 14
+name: Binary Search
+desc: Finds the position of a specified input value (search key) within an array by key value using the binary serach algorithm.  True positive may use any linear data-structure (array, list, etc).  Must use the binary search algorithm.  Must return the index or an error code.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 113 = 0.0
+              Type-2: 0 / 9 = 0.0
+      Type-2 (blind): 0 / 2 = 0.0
+ Type-2 (consistent): 0 / 7 = 0.0
+Very-Strongly Type-3: 0 / 29 = 0.0
+     Strongly Type-3: 1 / 302 = 0.0033112582781456954
+    Moderatly Type-3: 0 / 1923 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 93 = 0.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 6 = 0.0
+     Strongly Type-3: 0 / 138 = 0.0
+    Moderatly Type-3: 0 / 1824 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 20 = 0.0
+              Type-2: 0 / 9 = 0.0
+      Type-2 (blind): 0 / 2 = 0.0
+ Type-2 (consistent): 0 / 7 = 0.0
+Very-Strongly Type-3: 0 / 23 = 0.0
+     Strongly Type-3: 1 / 164 = 0.006097560975609756
+    Moderatly Type-3: 0 / 99 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 1065 = 0.0
+[55,60]: 0 / 370 = 0.0
+[60,65]: 0 / 324 = 0.0
+[65,70]: 0 / 164 = 0.0
+[70,75]: 0 / 70 = 0.0
+[75,80]: 1 / 43 = 0.023255813953488372
+[80,85]: 0 / 126 = 0.0
+[85,90]: 0 / 63 = 0.0
+[90,95]: 0 / 22 = 0.0
+[95,100]: 0 / 7 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 1056 = 0.0
+[55,60]: 0 / 352 = 0.0
+[60,65]: 0 / 276 = 0.0
+[65,70]: 0 / 140 = 0.0
+[70,75]: 0 / 42 = 0.0
+[75,80]: 0 / 21 = 0.0
+[80,85]: 0 / 56 = 0.0
+[85,90]: 0 / 19 = 0.0
+[90,95]: 0 / 1 = 0.0
+[95,100]: 0 / 5 = 0.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 9 = 0.0
+[55,60]: 0 / 18 = 0.0
+[60,65]: 0 / 48 = 0.0
+[65,70]: 0 / 24 = 0.0
+[70,75]: 0 / 28 = 0.0
+[75,80]: 1 / 22 = 0.045454545454545456
+[80,85]: 0 / 70 = 0.0
+[85,90]: 0 / 44 = 0.0
+[90,95]: 0 / 21 = 0.0
+[95,100]: 0 / 2 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 1 / 2254 = 4.4365572315882877E-4
+[55,100]: 1 / 1189 = 8.410428931875525E-4
+[60,100]: 1 / 819 = 0.001221001221001221
+[65,100]: 1 / 495 = 0.00202020202020202
+[70,100]: 1 / 331 = 0.0030211480362537764
+[75,100]: 1 / 261 = 0.0038314176245210726
+[80,100]: 0 / 218 = 0.0
+[85,100]: 0 / 92 = 0.0
+[90,100]: 0 / 29 = 0.0
+[95,100]: 0 / 7 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 1968 = 0.0
+[55,100]: 0 / 912 = 0.0
+[60,100]: 0 / 560 = 0.0
+[65,100]: 0 / 284 = 0.0
+[70,100]: 0 / 144 = 0.0
+[75,100]: 0 / 102 = 0.0
+[80,100]: 0 / 81 = 0.0
+[85,100]: 0 / 25 = 0.0
+[90,100]: 0 / 6 = 0.0
+[95,100]: 0 / 5 = 0.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 1 / 286 = 0.0034965034965034965
+[55,100]: 1 / 277 = 0.0036101083032490976
+[60,100]: 1 / 259 = 0.003861003861003861
+[65,100]: 1 / 211 = 0.004739336492890996
+[70,100]: 1 / 187 = 0.0053475935828877
+[75,100]: 1 / 159 = 0.006289308176100629
+[80,100]: 0 / 137 = 0.0
+[85,100]: 0 / 67 = 0.0
+[90,100]: 0 / 23 = 0.0
+[95,100]: 0 / 2 = 0.0
+
+================================================================================
+Functionality
+  id: 15
+name: Load Custom Font
+desc: 1 - Create font (from URL, file, etc) 2 - Register font with Graphics Environment.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 1 / 1 = 1.0
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 1 / 1 = 1.0
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 1 / 1 = 1.0
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 1 / 1 = 1.0
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 1 / 1 = 1.0
+[55,100]: 1 / 1 = 1.0
+[60,100]: 1 / 1 = 1.0
+[65,100]: 1 / 1 = 1.0
+[70,100]: 1 / 1 = 1.0
+[75,100]: 1 / 1 = 1.0
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 0 = NaN
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 1 / 1 = 1.0
+[55,100]: 1 / 1 = 1.0
+[60,100]: 1 / 1 = 1.0
+[65,100]: 1 / 1 = 1.0
+[70,100]: 1 / 1 = 1.0
+[75,100]: 1 / 1 = 1.0
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 17
+name: Create Encryption Key Files
+desc: 1 - Generates a pair of encryption keys, public and private. 2 - Encryption keys are written to file(s) in some format.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 2 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 2 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 2 = 0.0
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 2 = 0.0
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 2 = 0.0
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 2 = 0.0
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 0 = NaN
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 18
+name: Play Sound
+desc: Takes a sound source and plays it.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 4 / 4 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 3 / 3 = 1.0
+    Moderatly Type-3: 5 / 11 = 0.45454545454545453
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 3 / 3 = 1.0
+    Moderatly Type-3: 5 / 11 = 0.45454545454545453
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 4 / 4 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 6 = 0.0
+[55,60]: 0 / 0 = NaN
+[60,65]: 4 / 4 = 1.0
+[65,70]: 1 / 1 = 1.0
+[70,75]: 3 / 3 = 1.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 6 = 0.0
+[55,60]: 0 / 0 = NaN
+[60,65]: 4 / 4 = 1.0
+[65,70]: 1 / 1 = 1.0
+[70,75]: 3 / 3 = 1.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 8 / 14 = 0.5714285714285714
+[55,100]: 8 / 8 = 1.0
+[60,100]: 8 / 8 = 1.0
+[65,100]: 4 / 4 = 1.0
+[70,100]: 3 / 3 = 1.0
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 8 / 14 = 0.5714285714285714
+[55,100]: 8 / 8 = 1.0
+[60,100]: 8 / 8 = 1.0
+[65,100]: 4 / 4 = 1.0
+[70,100]: 3 / 3 = 1.0
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 0 = NaN
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 19
+name: Take Screenshot to File
+desc: 1 - Take Screenshot, 2 - Save screenshot to file.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 10 / 10 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 3 / 3 = 1.0
+     Strongly Type-3: 4 / 4 = 1.0
+    Moderatly Type-3: 14 / 87 = 0.16091954022988506
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 3 / 3 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 3 / 3 = 1.0
+     Strongly Type-3: 2 / 2 = 1.0
+    Moderatly Type-3: 8 / 76 = 0.10526315789473684
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 7 / 7 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 2 / 2 = 1.0
+    Moderatly Type-3: 6 / 11 = 0.5454545454545454
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 5 / 55 = 0.09090909090909091
+[55,60]: 6 / 15 = 0.4
+[60,65]: 3 / 17 = 0.17647058823529413
+[65,70]: 0 / 0 = NaN
+[70,75]: 2 / 2 = 1.0
+[75,80]: 1 / 1 = 1.0
+[80,85]: 0 / 0 = NaN
+[85,90]: 1 / 1 = 1.0
+[90,95]: 3 / 3 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 4 / 51 = 0.0784313725490196
+[55,60]: 2 / 9 = 0.2222222222222222
+[60,65]: 2 / 16 = 0.125
+[65,70]: 0 / 0 = NaN
+[70,75]: 1 / 1 = 1.0
+[75,80]: 1 / 1 = 1.0
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 3 / 3 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 1 / 4 = 0.25
+[55,60]: 4 / 6 = 0.6666666666666666
+[60,65]: 1 / 1 = 1.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 1 / 1 = 1.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 1 / 1 = 1.0
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 21 / 94 = 0.22340425531914893
+[55,100]: 16 / 39 = 0.41025641025641024
+[60,100]: 10 / 24 = 0.4166666666666667
+[65,100]: 7 / 7 = 1.0
+[70,100]: 7 / 7 = 1.0
+[75,100]: 5 / 5 = 1.0
+[80,100]: 4 / 4 = 1.0
+[85,100]: 4 / 4 = 1.0
+[90,100]: 3 / 3 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 13 / 81 = 0.16049382716049382
+[55,100]: 9 / 30 = 0.3
+[60,100]: 7 / 21 = 0.3333333333333333
+[65,100]: 5 / 5 = 1.0
+[70,100]: 5 / 5 = 1.0
+[75,100]: 4 / 4 = 1.0
+[80,100]: 3 / 3 = 1.0
+[85,100]: 3 / 3 = 1.0
+[90,100]: 3 / 3 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 8 / 13 = 0.6153846153846154
+[55,100]: 7 / 9 = 0.7777777777777778
+[60,100]: 3 / 3 = 1.0
+[65,100]: 2 / 2 = 1.0
+[70,100]: 2 / 2 = 1.0
+[75,100]: 1 / 1 = 1.0
+[80,100]: 1 / 1 = 1.0
+[85,100]: 1 / 1 = 1.0
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 20
+name: Fibonacci
+desc: Calculates either the ith fibonacci sequence, or the fibonacci sequence up to (or including) the ith term.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 1 / 1 = 1.0
+    Moderatly Type-3: 1 / 5 = 0.2
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 1 / 1 = 1.0
+    Moderatly Type-3: 1 / 4 = 0.25
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 1 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 1 / 3 = 0.3333333333333333
+[55,60]: 0 / 1 = 0.0
+[60,65]: 0 / 1 = 0.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 1 / 1 = 1.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 1 / 2 = 0.5
+[55,60]: 0 / 1 = 0.0
+[60,65]: 0 / 1 = 0.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 1 / 1 = 1.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 1 = 0.0
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 2 / 6 = 0.3333333333333333
+[55,100]: 1 / 3 = 0.3333333333333333
+[60,100]: 1 / 2 = 0.5
+[65,100]: 1 / 1 = 1.0
+[70,100]: 1 / 1 = 1.0
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 2 / 5 = 0.4
+[55,100]: 1 / 3 = 0.3333333333333333
+[60,100]: 1 / 2 = 0.5
+[65,100]: 1 / 1 = 1.0
+[70,100]: 1 / 1 = 1.0
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 1 = 0.0
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 21
+name: XMPP Send Message
+desc: 1 - Build a message (for example, MessageBuilder)., 2 - Send the message over XMPP service.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 1 = 0.0
+      Type-2 (blind): 0 / 1 = 0.0
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 1 / 1 = 1.0
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 2 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 1 / 1 = 1.0
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 2 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 1 = 0.0
+      Type-2 (blind): 0 / 1 = 0.0
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 1 = 0.0
+[55,60]: 0 / 1 = 0.0
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 1 = 0.0
+[55,60]: 0 / 1 = 0.0
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 1 / 3 = 0.3333333333333333
+[55,100]: 1 / 2 = 0.5
+[60,100]: 1 / 1 = 1.0
+[65,100]: 1 / 1 = 1.0
+[70,100]: 1 / 1 = 1.0
+[75,100]: 1 / 1 = 1.0
+[80,100]: 1 / 1 = 1.0
+[85,100]: 1 / 1 = 1.0
+[90,100]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 1 / 3 = 0.3333333333333333
+[55,100]: 1 / 2 = 0.5
+[60,100]: 1 / 1 = 1.0
+[65,100]: 1 / 1 = 1.0
+[70,100]: 1 / 1 = 1.0
+[75,100]: 1 / 1 = 1.0
+[80,100]: 1 / 1 = 1.0
+[85,100]: 1 / 1 = 1.0
+[90,100]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 0 = NaN
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 22
+name: Encrypt To File
+desc: Takes some data, encrypts it, and writes it to a file.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 1 / 1 = 1.0
+              Type-2: 1 / 1 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 1 / 1 = 1.0
+Very-Strongly Type-3: 2 / 2 = 1.0
+     Strongly Type-3: 3 / 3 = 1.0
+    Moderatly Type-3: 7 / 16 = 0.4375
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 1 / 1 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 1 / 1 = 1.0
+     Strongly Type-3: 1 / 1 = 1.0
+    Moderatly Type-3: 3 / 11 = 0.2727272727272727
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 0 = NaN
+              Type-2: 1 / 1 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 1 / 1 = 1.0
+Very-Strongly Type-3: 1 / 1 = 1.0
+     Strongly Type-3: 2 / 2 = 1.0
+    Moderatly Type-3: 4 / 5 = 0.8
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 2 / 8 = 0.25
+[55,60]: 3 / 5 = 0.6
+[60,65]: 2 / 3 = 0.6666666666666666
+[65,70]: 0 / 0 = NaN
+[70,75]: 1 / 1 = 1.0
+[75,80]: 1 / 1 = 1.0
+[80,85]: 0 / 0 = NaN
+[85,90]: 1 / 1 = 1.0
+[90,95]: 2 / 2 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 1 / 6 = 0.16666666666666666
+[55,60]: 1 / 3 = 0.3333333333333333
+[60,65]: 1 / 2 = 0.5
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 1 / 1 = 1.0
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 1 / 2 = 0.5
+[55,60]: 2 / 2 = 1.0
+[60,65]: 1 / 1 = 1.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 1 / 1 = 1.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 1 / 1 = 1.0
+[90,95]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 12 / 21 = 0.5714285714285714
+[55,100]: 10 / 13 = 0.7692307692307693
+[60,100]: 7 / 8 = 0.875
+[65,100]: 5 / 5 = 1.0
+[70,100]: 5 / 5 = 1.0
+[75,100]: 4 / 4 = 1.0
+[80,100]: 3 / 3 = 1.0
+[85,100]: 3 / 3 = 1.0
+[90,100]: 2 / 2 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 5 / 13 = 0.38461538461538464
+[55,100]: 4 / 7 = 0.5714285714285714
+[60,100]: 3 / 4 = 0.75
+[65,100]: 2 / 2 = 1.0
+[70,100]: 2 / 2 = 1.0
+[75,100]: 2 / 2 = 1.0
+[80,100]: 1 / 1 = 1.0
+[85,100]: 1 / 1 = 1.0
+[90,100]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 7 / 8 = 0.875
+[55,100]: 6 / 6 = 1.0
+[60,100]: 4 / 4 = 1.0
+[65,100]: 3 / 3 = 1.0
+[70,100]: 3 / 3 = 1.0
+[75,100]: 2 / 2 = 1.0
+[80,100]: 2 / 2 = 1.0
+[85,100]: 2 / 2 = 1.0
+[90,100]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 23
+name: Resize Array
+desc: Re-sizes (shrink or expand) an array.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 136 = 0.0
+              Type-2: 0 / 5 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 5 = 0.0
+Very-Strongly Type-3: 0 / 87 = 0.0
+     Strongly Type-3: 0 / 47 = 0.0
+    Moderatly Type-3: 0 / 112 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 127 = 0.0
+              Type-2: 0 / 5 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 5 = 0.0
+Very-Strongly Type-3: 0 / 81 = 0.0
+     Strongly Type-3: 0 / 41 = 0.0
+    Moderatly Type-3: 0 / 100 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 9 = 0.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 6 = 0.0
+     Strongly Type-3: 0 / 6 = 0.0
+    Moderatly Type-3: 0 / 12 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 69 = 0.0
+[55,60]: 0 / 16 = 0.0
+[60,65]: 0 / 18 = 0.0
+[65,70]: 0 / 9 = 0.0
+[70,75]: 0 / 18 = 0.0
+[75,80]: 0 / 14 = 0.0
+[80,85]: 0 / 12 = 0.0
+[85,90]: 0 / 3 = 0.0
+[90,95]: 0 / 83 = 0.0
+[95,100]: 0 / 4 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 63 = 0.0
+[55,60]: 0 / 14 = 0.0
+[60,65]: 0 / 15 = 0.0
+[65,70]: 0 / 8 = 0.0
+[70,75]: 0 / 15 = 0.0
+[75,80]: 0 / 13 = 0.0
+[80,85]: 0 / 10 = 0.0
+[85,90]: 0 / 3 = 0.0
+[90,95]: 0 / 80 = 0.0
+[95,100]: 0 / 1 = 0.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 6 = 0.0
+[55,60]: 0 / 2 = 0.0
+[60,65]: 0 / 3 = 0.0
+[65,70]: 0 / 1 = 0.0
+[70,75]: 0 / 3 = 0.0
+[75,80]: 0 / 1 = 0.0
+[80,85]: 0 / 2 = 0.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 3 = 0.0
+[95,100]: 0 / 3 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 246 = 0.0
+[55,100]: 0 / 177 = 0.0
+[60,100]: 0 / 161 = 0.0
+[65,100]: 0 / 143 = 0.0
+[70,100]: 0 / 134 = 0.0
+[75,100]: 0 / 116 = 0.0
+[80,100]: 0 / 102 = 0.0
+[85,100]: 0 / 90 = 0.0
+[90,100]: 0 / 87 = 0.0
+[95,100]: 0 / 4 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 222 = 0.0
+[55,100]: 0 / 159 = 0.0
+[60,100]: 0 / 145 = 0.0
+[65,100]: 0 / 130 = 0.0
+[70,100]: 0 / 122 = 0.0
+[75,100]: 0 / 107 = 0.0
+[80,100]: 0 / 94 = 0.0
+[85,100]: 0 / 84 = 0.0
+[90,100]: 0 / 81 = 0.0
+[95,100]: 0 / 1 = 0.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 24 = 0.0
+[55,100]: 0 / 18 = 0.0
+[60,100]: 0 / 16 = 0.0
+[65,100]: 0 / 13 = 0.0
+[70,100]: 0 / 12 = 0.0
+[75,100]: 0 / 9 = 0.0
+[80,100]: 0 / 8 = 0.0
+[85,100]: 0 / 6 = 0.0
+[90,100]: 0 / 6 = 0.0
+[95,100]: 0 / 3 = 0.0
+
+================================================================================
+Functionality
+  id: 24
+name: Open URL in System Browser
+desc: Open URL in system default web browser.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 22 / 22 = 1.0
+              Type-2: 33 / 33 = 1.0
+      Type-2 (blind): 16 / 16 = 1.0
+ Type-2 (consistent): 17 / 17 = 1.0
+Very-Strongly Type-3: 24 / 24 = 1.0
+     Strongly Type-3: 87 / 98 = 0.8877551020408163
+    Moderatly Type-3: 438 / 1626 = 0.2693726937269373
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 7 / 7 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 9 / 9 = 1.0
+     Strongly Type-3: 77 / 86 = 0.8953488372093024
+    Moderatly Type-3: 421 / 1603 = 0.2626325639426076
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 15 / 15 = 1.0
+              Type-2: 33 / 33 = 1.0
+      Type-2 (blind): 16 / 16 = 1.0
+ Type-2 (consistent): 17 / 17 = 1.0
+Very-Strongly Type-3: 15 / 15 = 1.0
+     Strongly Type-3: 10 / 12 = 0.8333333333333334
+    Moderatly Type-3: 17 / 23 = 0.7391304347826086
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 120 / 912 = 0.13157894736842105
+[55,60]: 183 / 441 = 0.41496598639455784
+[60,65]: 76 / 175 = 0.4342857142857143
+[65,70]: 59 / 98 = 0.6020408163265306
+[70,75]: 40 / 49 = 0.8163265306122449
+[75,80]: 25 / 27 = 0.9259259259259259
+[80,85]: 20 / 20 = 1.0
+[85,90]: 2 / 2 = 1.0
+[90,95]: 18 / 18 = 1.0
+[95,100]: 6 / 6 = 1.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 117 / 907 = 0.12899669239250275
+[55,60]: 178 / 433 = 0.4110854503464203
+[60,65]: 73 / 172 = 0.42441860465116277
+[65,70]: 53 / 91 = 0.5824175824175825
+[70,75]: 38 / 47 = 0.8085106382978723
+[75,80]: 25 / 25 = 1.0
+[80,85]: 14 / 14 = 1.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 4 / 4 = 1.0
+[95,100]: 5 / 5 = 1.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 3 / 5 = 0.6
+[55,60]: 5 / 8 = 0.625
+[60,65]: 3 / 3 = 1.0
+[65,70]: 6 / 7 = 0.8571428571428571
+[70,75]: 2 / 2 = 1.0
+[75,80]: 0 / 2 = 0.0
+[80,85]: 6 / 6 = 1.0
+[85,90]: 2 / 2 = 1.0
+[90,95]: 14 / 14 = 1.0
+[95,100]: 1 / 1 = 1.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 549 / 1748 = 0.31407322654462244
+[55,100]: 429 / 836 = 0.5131578947368421
+[60,100]: 246 / 395 = 0.6227848101265823
+[65,100]: 170 / 220 = 0.7727272727272727
+[70,100]: 111 / 122 = 0.9098360655737705
+[75,100]: 71 / 73 = 0.9726027397260274
+[80,100]: 46 / 46 = 1.0
+[85,100]: 26 / 26 = 1.0
+[90,100]: 24 / 24 = 1.0
+[95,100]: 6 / 6 = 1.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 507 / 1698 = 0.29858657243816256
+[55,100]: 390 / 791 = 0.49304677623261695
+[60,100]: 212 / 358 = 0.5921787709497207
+[65,100]: 139 / 186 = 0.7473118279569892
+[70,100]: 86 / 95 = 0.9052631578947369
+[75,100]: 48 / 48 = 1.0
+[80,100]: 23 / 23 = 1.0
+[85,100]: 9 / 9 = 1.0
+[90,100]: 9 / 9 = 1.0
+[95,100]: 5 / 5 = 1.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 42 / 50 = 0.84
+[55,100]: 39 / 45 = 0.8666666666666667
+[60,100]: 34 / 37 = 0.918918918918919
+[65,100]: 31 / 34 = 0.9117647058823529
+[70,100]: 25 / 27 = 0.9259259259259259
+[75,100]: 23 / 25 = 0.92
+[80,100]: 23 / 23 = 1.0
+[85,100]: 17 / 17 = 1.0
+[90,100]: 15 / 15 = 1.0
+[95,100]: 1 / 1 = 1.0
+
+================================================================================
+Functionality
+  id: 25
+name: Open File in Desktop Application
+desc: 1 - Check to see if desktop AWT is supported on the platform (isDesktopSupported)., 2 - Open the file using default desktop application (open() on Desktop object).
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 2 / 2 = 1.0
+              Type-2: 1 / 1 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 1 / 1 = 1.0
+Very-Strongly Type-3: 1 / 1 = 1.0
+     Strongly Type-3: 2 / 2 = 1.0
+    Moderatly Type-3: 22 / 86 = 0.2558139534883721
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 21 / 85 = 0.24705882352941178
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 2 / 2 = 1.0
+              Type-2: 1 / 1 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 1 / 1 = 1.0
+Very-Strongly Type-3: 1 / 1 = 1.0
+     Strongly Type-3: 2 / 2 = 1.0
+    Moderatly Type-3: 1 / 1 = 1.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 4 / 47 = 0.0851063829787234
+[55,60]: 5 / 18 = 0.2777777777777778
+[60,65]: 9 / 16 = 0.5625
+[65,70]: 4 / 5 = 0.8
+[70,75]: 0 / 0 = NaN
+[75,80]: 1 / 1 = 1.0
+[80,85]: 1 / 1 = 1.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 4 / 47 = 0.0851063829787234
+[55,60]: 4 / 17 = 0.23529411764705882
+[60,65]: 9 / 16 = 0.5625
+[65,70]: 4 / 5 = 0.8
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 1 / 1 = 1.0
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 1 / 1 = 1.0
+[80,85]: 1 / 1 = 1.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 25 / 89 = 0.2808988764044944
+[55,100]: 21 / 42 = 0.5
+[60,100]: 16 / 24 = 0.6666666666666666
+[65,100]: 7 / 8 = 0.875
+[70,100]: 3 / 3 = 1.0
+[75,100]: 3 / 3 = 1.0
+[80,100]: 2 / 2 = 1.0
+[85,100]: 1 / 1 = 1.0
+[90,100]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 21 / 85 = 0.24705882352941178
+[55,100]: 17 / 38 = 0.4473684210526316
+[60,100]: 13 / 21 = 0.6190476190476191
+[65,100]: 4 / 5 = 0.8
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 4 / 4 = 1.0
+[55,100]: 4 / 4 = 1.0
+[60,100]: 3 / 3 = 1.0
+[65,100]: 3 / 3 = 1.0
+[70,100]: 3 / 3 = 1.0
+[75,100]: 3 / 3 = 1.0
+[80,100]: 2 / 2 = 1.0
+[85,100]: 1 / 1 = 1.0
+[90,100]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 26
+name: GCD
+desc: Find Greatest Common Denominator
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 2 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 2 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 1 = 0.0
+[55,60]: 0 / 1 = 0.0
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 1 = 0.0
+[55,60]: 0 / 1 = 0.0
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 2 = 0.0
+[55,100]: 0 / 1 = 0.0
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 2 = 0.0
+[55,100]: 0 / 1 = 0.0
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 0 = NaN
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 27
+name: Call Method Using Reflection
+desc: Uses reflection to access a method and invokes that method.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 231 / 3527 = 0.06549475474907854
+              Type-2: 2 / 8 = 0.25
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 2 / 8 = 0.25
+Very-Strongly Type-3: 0 / 314 = 0.0
+     Strongly Type-3: 2 / 348 = 0.005747126436781609
+    Moderatly Type-3: 2 / 15 = 0.13333333333333333
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 472 = 0.0
+              Type-2: 0 / 6 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 6 = 0.0
+Very-Strongly Type-3: 0 / 52 = 0.0
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 11 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 231 / 3055 = 0.07561374795417349
+              Type-2: 2 / 2 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 2 / 2 = 1.0
+Very-Strongly Type-3: 0 / 262 = 0.0
+     Strongly Type-3: 2 / 348 = 0.005747126436781609
+    Moderatly Type-3: 2 / 4 = 0.5
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 13 = 0.0
+[55,60]: 0 / 0 = NaN
+[60,65]: 2 / 2 = 1.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 1 = 0.0
+[80,85]: 0 / 13 = 0.0
+[85,90]: 2 / 334 = 0.005988023952095809
+[90,95]: 0 / 121 = 0.0
+[95,100]: 0 / 193 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 11 = 0.0
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 52 = 0.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 2 = 0.0
+[55,60]: 0 / 0 = NaN
+[60,65]: 2 / 2 = 1.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 1 = 0.0
+[80,85]: 0 / 13 = 0.0
+[85,90]: 2 / 334 = 0.005988023952095809
+[90,95]: 0 / 121 = 0.0
+[95,100]: 0 / 141 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 4 / 677 = 0.005908419497784343
+[55,100]: 4 / 664 = 0.006024096385542169
+[60,100]: 4 / 664 = 0.006024096385542169
+[65,100]: 2 / 662 = 0.0030211480362537764
+[70,100]: 2 / 662 = 0.0030211480362537764
+[75,100]: 2 / 662 = 0.0030211480362537764
+[80,100]: 2 / 661 = 0.0030257186081694403
+[85,100]: 2 / 648 = 0.0030864197530864196
+[90,100]: 0 / 314 = 0.0
+[95,100]: 0 / 193 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 63 = 0.0
+[55,100]: 0 / 52 = 0.0
+[60,100]: 0 / 52 = 0.0
+[65,100]: 0 / 52 = 0.0
+[70,100]: 0 / 52 = 0.0
+[75,100]: 0 / 52 = 0.0
+[80,100]: 0 / 52 = 0.0
+[85,100]: 0 / 52 = 0.0
+[90,100]: 0 / 52 = 0.0
+[95,100]: 0 / 52 = 0.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 4 / 614 = 0.006514657980456026
+[55,100]: 4 / 612 = 0.006535947712418301
+[60,100]: 4 / 612 = 0.006535947712418301
+[65,100]: 2 / 610 = 0.003278688524590164
+[70,100]: 2 / 610 = 0.003278688524590164
+[75,100]: 2 / 610 = 0.003278688524590164
+[80,100]: 2 / 609 = 0.003284072249589491
+[85,100]: 2 / 596 = 0.003355704697986577
+[90,100]: 0 / 262 = 0.0
+[95,100]: 0 / 141 = 0.0
+
+================================================================================
+Functionality
+  id: 28
+name: Parse XML to DOM
+desc: 1 - Create or retrieve DocumentBuilderFactory. * 2 - Configure Factory (Optional). ** 3 - Use factory create new document builder. 4 - Use the document builder to parse the XML data. 5 - Return or use the DOM.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 198 / 198 = 1.0
+              Type-2: 9 / 9 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 9 / 9 = 1.0
+Very-Strongly Type-3: 63 / 63 = 1.0
+     Strongly Type-3: 94 / 102 = 0.9215686274509803
+    Moderatly Type-3: 75 / 167 = 0.4491017964071856
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 74 / 74 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 19 / 19 = 1.0
+     Strongly Type-3: 20 / 20 = 1.0
+    Moderatly Type-3: 7 / 79 = 0.08860759493670886
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 124 / 124 = 1.0
+              Type-2: 9 / 9 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 9 / 9 = 1.0
+Very-Strongly Type-3: 44 / 44 = 1.0
+     Strongly Type-3: 74 / 82 = 0.9024390243902439
+    Moderatly Type-3: 68 / 88 = 0.7727272727272727
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 36 / 102 = 0.35294117647058826
+[55,60]: 13 / 36 = 0.3611111111111111
+[60,65]: 13 / 15 = 0.8666666666666667
+[65,70]: 13 / 14 = 0.9285714285714286
+[70,75]: 14 / 18 = 0.7777777777777778
+[75,80]: 18 / 18 = 1.0
+[80,85]: 52 / 52 = 1.0
+[85,90]: 10 / 14 = 0.7142857142857143
+[90,95]: 53 / 53 = 1.0
+[95,100]: 10 / 10 = 1.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 51 = 0.0
+[55,60]: 3 / 22 = 0.13636363636363635
+[60,65]: 4 / 6 = 0.6666666666666666
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 2 / 2 = 1.0
+[80,85]: 17 / 17 = 1.0
+[85,90]: 1 / 1 = 1.0
+[90,95]: 19 / 19 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 36 / 51 = 0.7058823529411765
+[55,60]: 10 / 14 = 0.7142857142857143
+[60,65]: 9 / 9 = 1.0
+[65,70]: 13 / 14 = 0.9285714285714286
+[70,75]: 14 / 18 = 0.7777777777777778
+[75,80]: 16 / 16 = 1.0
+[80,85]: 35 / 35 = 1.0
+[85,90]: 9 / 13 = 0.6923076923076923
+[90,95]: 34 / 34 = 1.0
+[95,100]: 10 / 10 = 1.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 232 / 332 = 0.6987951807228916
+[55,100]: 196 / 230 = 0.8521739130434782
+[60,100]: 183 / 194 = 0.9432989690721649
+[65,100]: 170 / 179 = 0.9497206703910615
+[70,100]: 157 / 165 = 0.9515151515151515
+[75,100]: 143 / 147 = 0.9727891156462585
+[80,100]: 125 / 129 = 0.9689922480620154
+[85,100]: 73 / 77 = 0.948051948051948
+[90,100]: 63 / 63 = 1.0
+[95,100]: 10 / 10 = 1.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 46 / 118 = 0.3898305084745763
+[55,100]: 46 / 67 = 0.6865671641791045
+[60,100]: 43 / 45 = 0.9555555555555556
+[65,100]: 39 / 39 = 1.0
+[70,100]: 39 / 39 = 1.0
+[75,100]: 39 / 39 = 1.0
+[80,100]: 37 / 37 = 1.0
+[85,100]: 20 / 20 = 1.0
+[90,100]: 19 / 19 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 186 / 214 = 0.8691588785046729
+[55,100]: 150 / 163 = 0.9202453987730062
+[60,100]: 140 / 149 = 0.9395973154362416
+[65,100]: 131 / 140 = 0.9357142857142857
+[70,100]: 118 / 126 = 0.9365079365079365
+[75,100]: 104 / 108 = 0.9629629629629629
+[80,100]: 88 / 92 = 0.9565217391304348
+[85,100]: 53 / 57 = 0.9298245614035088
+[90,100]: 44 / 44 = 1.0
+[95,100]: 10 / 10 = 1.0
+
+================================================================================
+Functionality
+  id: 29
+name: Convert Date String Format
+desc: 1 - Parse source date string using a format (could be default format of Date). 2 - Format the date using a new format, producing a new date string of the new format.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 15 / 15 = 1.0
+              Type-2: 2 / 2 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 2 / 2 = 1.0
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 18 / 18 = 1.0
+    Moderatly Type-3: 5 / 24 = 0.20833333333333334
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 3 / 22 = 0.13636363636363635
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 15 / 15 = 1.0
+              Type-2: 2 / 2 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 2 / 2 = 1.0
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 18 / 18 = 1.0
+    Moderatly Type-3: 2 / 2 = 1.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 1 / 15 = 0.06666666666666667
+[55,60]: 0 / 1 = 0.0
+[60,65]: 3 / 5 = 0.6
+[65,70]: 1 / 3 = 0.3333333333333333
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 16 / 16 = 1.0
+[85,90]: 2 / 2 = 1.0
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 1 / 15 = 0.06666666666666667
+[55,60]: 0 / 1 = 0.0
+[60,65]: 1 / 3 = 0.3333333333333333
+[65,70]: 1 / 3 = 0.3333333333333333
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 2 / 2 = 1.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 16 / 16 = 1.0
+[85,90]: 2 / 2 = 1.0
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 23 / 42 = 0.5476190476190477
+[55,100]: 22 / 27 = 0.8148148148148148
+[60,100]: 22 / 26 = 0.8461538461538461
+[65,100]: 19 / 21 = 0.9047619047619048
+[70,100]: 18 / 18 = 1.0
+[75,100]: 18 / 18 = 1.0
+[80,100]: 18 / 18 = 1.0
+[85,100]: 2 / 2 = 1.0
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 3 / 22 = 0.13636363636363635
+[55,100]: 2 / 7 = 0.2857142857142857
+[60,100]: 2 / 6 = 0.3333333333333333
+[65,100]: 1 / 3 = 0.3333333333333333
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 20 / 20 = 1.0
+[55,100]: 20 / 20 = 1.0
+[60,100]: 20 / 20 = 1.0
+[65,100]: 18 / 18 = 1.0
+[70,100]: 18 / 18 = 1.0
+[75,100]: 18 / 18 = 1.0
+[80,100]: 18 / 18 = 1.0
+[85,100]: 2 / 2 = 1.0
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 30
+name: Zip Files
+desc: A zip archive is created containing one or more files.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 2 / 190 = 0.010526315789473684
+              Type-2: 0 / 21 = 0.0
+      Type-2 (blind): 0 / 2 = 0.0
+ Type-2 (consistent): 0 / 19 = 0.0
+Very-Strongly Type-3: 1 / 66 = 0.015151515151515152
+     Strongly Type-3: 3 / 448 = 0.006696428571428571
+    Moderatly Type-3: 8 / 5012 = 0.0015961691939345571
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 1 / 58 = 0.017241379310344827
+              Type-2: 0 / 8 = 0.0
+      Type-2 (blind): 0 / 1 = 0.0
+ Type-2 (consistent): 0 / 7 = 0.0
+Very-Strongly Type-3: 1 / 26 = 0.038461538461538464
+     Strongly Type-3: 1 / 310 = 0.0032258064516129032
+    Moderatly Type-3: 4 / 4874 = 8.206811653672548E-4
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 1 / 132 = 0.007575757575757576
+              Type-2: 0 / 13 = 0.0
+      Type-2 (blind): 0 / 1 = 0.0
+ Type-2 (consistent): 0 / 12 = 0.0
+Very-Strongly Type-3: 0 / 40 = 0.0
+     Strongly Type-3: 2 / 138 = 0.014492753623188406
+    Moderatly Type-3: 4 / 138 = 0.028985507246376812
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 2 / 3183 = 6.283380458686773E-4
+[55,60]: 2 / 960 = 0.0020833333333333333
+[60,65]: 1 / 613 = 0.0016313213703099511
+[65,70]: 3 / 256 = 0.01171875
+[70,75]: 2 / 165 = 0.012121212121212121
+[75,80]: 0 / 112 = 0.0
+[80,85]: 0 / 121 = 0.0
+[85,90]: 1 / 50 = 0.02
+[90,95]: 1 / 42 = 0.023809523809523808
+[95,100]: 0 / 24 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 1 / 3153 = 3.171582619727244E-4
+[55,60]: 1 / 931 = 0.0010741138560687433
+[60,65]: 0 / 558 = 0.0
+[65,70]: 2 / 232 = 0.008620689655172414
+[70,75]: 1 / 148 = 0.006756756756756757
+[75,80]: 0 / 78 = 0.0
+[80,85]: 0 / 70 = 0.0
+[85,90]: 0 / 14 = 0.0
+[90,95]: 1 / 19 = 0.05263157894736842
+[95,100]: 0 / 7 = 0.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 1 / 30 = 0.03333333333333333
+[55,60]: 1 / 29 = 0.034482758620689655
+[60,65]: 1 / 55 = 0.01818181818181818
+[65,70]: 1 / 24 = 0.041666666666666664
+[70,75]: 1 / 17 = 0.058823529411764705
+[75,80]: 0 / 34 = 0.0
+[80,85]: 0 / 51 = 0.0
+[85,90]: 1 / 36 = 0.027777777777777776
+[90,95]: 0 / 23 = 0.0
+[95,100]: 0 / 17 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 12 / 5526 = 0.002171552660152009
+[55,100]: 10 / 2343 = 0.004268032437046522
+[60,100]: 8 / 1383 = 0.005784526391901663
+[65,100]: 7 / 770 = 0.00909090909090909
+[70,100]: 4 / 514 = 0.007782101167315175
+[75,100]: 2 / 349 = 0.0057306590257879654
+[80,100]: 2 / 237 = 0.008438818565400843
+[85,100]: 2 / 116 = 0.017241379310344827
+[90,100]: 1 / 66 = 0.015151515151515152
+[95,100]: 0 / 24 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 6 / 5210 = 0.0011516314779270633
+[55,100]: 5 / 2057 = 0.0024307243558580457
+[60,100]: 4 / 1126 = 0.003552397868561279
+[65,100]: 4 / 568 = 0.007042253521126761
+[70,100]: 2 / 336 = 0.005952380952380952
+[75,100]: 1 / 188 = 0.005319148936170213
+[80,100]: 1 / 110 = 0.00909090909090909
+[85,100]: 1 / 40 = 0.025
+[90,100]: 1 / 26 = 0.038461538461538464
+[95,100]: 0 / 7 = 0.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 6 / 316 = 0.0189873417721519
+[55,100]: 5 / 286 = 0.017482517482517484
+[60,100]: 4 / 257 = 0.01556420233463035
+[65,100]: 3 / 202 = 0.01485148514851485
+[70,100]: 2 / 178 = 0.011235955056179775
+[75,100]: 1 / 161 = 0.006211180124223602
+[80,100]: 1 / 127 = 0.007874015748031496
+[85,100]: 1 / 76 = 0.013157894736842105
+[90,100]: 0 / 40 = 0.0
+[95,100]: 0 / 17 = 0.0
+
+================================================================================
+Functionality
+  id: 31
+name: File Dialog
+desc: Use a file chooser to select 1 or more files or directories.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 911 / 911 = 1.0
+              Type-2: 5 / 5 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 5 / 5 = 1.0
+Very-Strongly Type-3: 91 / 91 = 1.0
+     Strongly Type-3: 35 / 36 = 0.9722222222222222
+    Moderatly Type-3: 38 / 117 = 0.3247863247863248
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 1 / 1 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 1 / 1 = 1.0
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 3 / 48 = 0.0625
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 911 / 911 = 1.0
+              Type-2: 4 / 4 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 4 / 4 = 1.0
+Very-Strongly Type-3: 91 / 91 = 1.0
+     Strongly Type-3: 35 / 36 = 0.9722222222222222
+    Moderatly Type-3: 35 / 69 = 0.5072463768115942
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 15 / 64 = 0.234375
+[55,60]: 7 / 22 = 0.3181818181818182
+[60,65]: 11 / 24 = 0.4583333333333333
+[65,70]: 5 / 7 = 0.7142857142857143
+[70,75]: 4 / 5 = 0.8
+[75,80]: 11 / 11 = 1.0
+[80,85]: 7 / 7 = 1.0
+[85,90]: 13 / 13 = 1.0
+[90,95]: 6 / 6 = 1.0
+[95,100]: 85 / 85 = 1.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 3 / 41 = 0.07317073170731707
+[55,60]: 0 / 3 = 0.0
+[60,65]: 0 / 4 = 0.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 12 / 23 = 0.5217391304347826
+[55,60]: 7 / 19 = 0.3684210526315789
+[60,65]: 11 / 20 = 0.55
+[65,70]: 5 / 7 = 0.7142857142857143
+[70,75]: 4 / 5 = 0.8
+[75,80]: 11 / 11 = 1.0
+[80,85]: 7 / 7 = 1.0
+[85,90]: 13 / 13 = 1.0
+[90,95]: 6 / 6 = 1.0
+[95,100]: 85 / 85 = 1.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 164 / 244 = 0.6721311475409836
+[55,100]: 149 / 180 = 0.8277777777777777
+[60,100]: 142 / 158 = 0.8987341772151899
+[65,100]: 131 / 134 = 0.9776119402985075
+[70,100]: 126 / 127 = 0.9921259842519685
+[75,100]: 122 / 122 = 1.0
+[80,100]: 111 / 111 = 1.0
+[85,100]: 104 / 104 = 1.0
+[90,100]: 91 / 91 = 1.0
+[95,100]: 85 / 85 = 1.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 3 / 48 = 0.0625
+[55,100]: 0 / 7 = 0.0
+[60,100]: 0 / 4 = 0.0
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 161 / 196 = 0.8214285714285714
+[55,100]: 149 / 173 = 0.861271676300578
+[60,100]: 142 / 154 = 0.922077922077922
+[65,100]: 131 / 134 = 0.9776119402985075
+[70,100]: 126 / 127 = 0.9921259842519685
+[75,100]: 122 / 122 = 1.0
+[80,100]: 111 / 111 = 1.0
+[85,100]: 104 / 104 = 1.0
+[90,100]: 91 / 91 = 1.0
+[95,100]: 85 / 85 = 1.0
+
+================================================================================
+Functionality
+  id: 32
+name: Send E-Mail
+desc: Send E-Mail using Java Mail: 1 - Receives a Session (either creates session in snippet, or its created elsewhere)., 2 - Creates the MimeMessage and configures it with at least some standard data (receipient at least), 3 - Sends the e-mail by Transport: Transport.send(msg).
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 453 / 453 = 1.0
+              Type-2: 2 / 2 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 2 / 2 = 1.0
+Very-Strongly Type-3: 3 / 3 = 1.0
+     Strongly Type-3: 388 / 390 = 0.9948717948717949
+    Moderatly Type-3: 57 / 208 = 0.27403846153846156
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 277 / 277 = 1.0
+              Type-2: 2 / 2 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 2 / 2 = 1.0
+Very-Strongly Type-3: 1 / 1 = 1.0
+     Strongly Type-3: 244 / 245 = 0.9959183673469387
+    Moderatly Type-3: 55 / 205 = 0.2682926829268293
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 176 / 176 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 2 / 2 = 1.0
+     Strongly Type-3: 144 / 145 = 0.993103448275862
+    Moderatly Type-3: 2 / 3 = 0.6666666666666666
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 36 / 138 = 0.2608695652173913
+[55,60]: 11 / 36 = 0.3055555555555556
+[60,65]: 5 / 20 = 0.25
+[65,70]: 5 / 14 = 0.35714285714285715
+[70,75]: 10 / 11 = 0.9090909090909091
+[75,80]: 188 / 189 = 0.9947089947089947
+[80,85]: 9 / 9 = 1.0
+[85,90]: 181 / 181 = 1.0
+[90,95]: 2 / 2 = 1.0
+[95,100]: 1 / 1 = 1.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 36 / 137 = 0.26277372262773724
+[55,60]: 10 / 35 = 0.2857142857142857
+[60,65]: 4 / 19 = 0.21052631578947367
+[65,70]: 5 / 14 = 0.35714285714285715
+[70,75]: 10 / 11 = 0.9090909090909091
+[75,80]: 117 / 117 = 1.0
+[80,85]: 6 / 6 = 1.0
+[85,90]: 111 / 111 = 1.0
+[90,95]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 1 = 0.0
+[55,60]: 1 / 1 = 1.0
+[60,65]: 1 / 1 = 1.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 71 / 72 = 0.9861111111111112
+[80,85]: 3 / 3 = 1.0
+[85,90]: 70 / 70 = 1.0
+[90,95]: 1 / 1 = 1.0
+[95,100]: 1 / 1 = 1.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 448 / 601 = 0.7454242928452579
+[55,100]: 412 / 463 = 0.8898488120950324
+[60,100]: 401 / 427 = 0.9391100702576113
+[65,100]: 396 / 407 = 0.972972972972973
+[70,100]: 391 / 393 = 0.9949109414758269
+[75,100]: 381 / 382 = 0.9973821989528796
+[80,100]: 193 / 193 = 1.0
+[85,100]: 184 / 184 = 1.0
+[90,100]: 3 / 3 = 1.0
+[95,100]: 1 / 1 = 1.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 300 / 451 = 0.6651884700665188
+[55,100]: 264 / 314 = 0.8407643312101911
+[60,100]: 254 / 279 = 0.910394265232975
+[65,100]: 250 / 260 = 0.9615384615384616
+[70,100]: 245 / 246 = 0.9959349593495935
+[75,100]: 235 / 235 = 1.0
+[80,100]: 118 / 118 = 1.0
+[85,100]: 112 / 112 = 1.0
+[90,100]: 1 / 1 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 148 / 150 = 0.9866666666666667
+[55,100]: 148 / 149 = 0.9932885906040269
+[60,100]: 147 / 148 = 0.9932432432432432
+[65,100]: 146 / 147 = 0.9931972789115646
+[70,100]: 146 / 147 = 0.9931972789115646
+[75,100]: 146 / 147 = 0.9931972789115646
+[80,100]: 75 / 75 = 1.0
+[85,100]: 72 / 72 = 1.0
+[90,100]: 2 / 2 = 1.0
+[95,100]: 1 / 1 = 1.0
+
+================================================================================
+Functionality
+  id: 33
+name: CRC32 File Checksum
+desc: 1 - Receives some file. 2 - Produces a CRC32 checksum of the file.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 50 / 50 = 1.0
+              Type-2: 3 / 3 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 3 / 3 = 1.0
+Very-Strongly Type-3: 9 / 9 = 1.0
+     Strongly Type-3: 9 / 10 = 0.9
+    Moderatly Type-3: 11 / 52 = 0.21153846153846154
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 5 / 5 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 5 / 5 = 1.0
+     Strongly Type-3: 2 / 2 = 1.0
+    Moderatly Type-3: 7 / 40 = 0.175
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 45 / 45 = 1.0
+              Type-2: 3 / 3 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 3 / 3 = 1.0
+Very-Strongly Type-3: 4 / 4 = 1.0
+     Strongly Type-3: 7 / 8 = 0.875
+    Moderatly Type-3: 4 / 12 = 0.3333333333333333
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 2 / 29 = 0.06896551724137931
+[55,60]: 3 / 10 = 0.3
+[60,65]: 2 / 7 = 0.2857142857142857
+[65,70]: 4 / 6 = 0.6666666666666666
+[70,75]: 3 / 3 = 1.0
+[75,80]: 1 / 1 = 1.0
+[80,85]: 3 / 4 = 0.75
+[85,90]: 2 / 2 = 1.0
+[90,95]: 9 / 9 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 1 / 24 = 0.041666666666666664
+[55,60]: 1 / 7 = 0.14285714285714285
+[60,65]: 1 / 4 = 0.25
+[65,70]: 4 / 5 = 0.8
+[70,75]: 1 / 1 = 1.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 1 / 1 = 1.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 5 / 5 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 1 / 5 = 0.2
+[55,60]: 2 / 3 = 0.6666666666666666
+[60,65]: 1 / 3 = 0.3333333333333333
+[65,70]: 0 / 1 = 0.0
+[70,75]: 2 / 2 = 1.0
+[75,80]: 1 / 1 = 1.0
+[80,85]: 2 / 3 = 0.6666666666666666
+[85,90]: 2 / 2 = 1.0
+[90,95]: 4 / 4 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 29 / 71 = 0.4084507042253521
+[55,100]: 27 / 42 = 0.6428571428571429
+[60,100]: 24 / 32 = 0.75
+[65,100]: 22 / 25 = 0.88
+[70,100]: 18 / 19 = 0.9473684210526315
+[75,100]: 15 / 16 = 0.9375
+[80,100]: 14 / 15 = 0.9333333333333333
+[85,100]: 11 / 11 = 1.0
+[90,100]: 9 / 9 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 14 / 47 = 0.2978723404255319
+[55,100]: 13 / 23 = 0.5652173913043478
+[60,100]: 12 / 16 = 0.75
+[65,100]: 11 / 12 = 0.9166666666666666
+[70,100]: 7 / 7 = 1.0
+[75,100]: 6 / 6 = 1.0
+[80,100]: 6 / 6 = 1.0
+[85,100]: 5 / 5 = 1.0
+[90,100]: 5 / 5 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 15 / 24 = 0.625
+[55,100]: 14 / 19 = 0.7368421052631579
+[60,100]: 12 / 16 = 0.75
+[65,100]: 11 / 13 = 0.8461538461538461
+[70,100]: 11 / 12 = 0.9166666666666666
+[75,100]: 9 / 10 = 0.9
+[80,100]: 8 / 9 = 0.8888888888888888
+[85,100]: 6 / 6 = 1.0
+[90,100]: 4 / 4 = 1.0
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 34
+name: Execute External Process
+desc: Execute external process and do something with the output (stdout or sterr or both).
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 3 / 1484 = 0.0020215633423180594
+              Type-2: 0 / 25 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 25 = 0.0
+Very-Strongly Type-3: 0 / 709 = 0.0
+     Strongly Type-3: 0 / 144 = 0.0
+    Moderatly Type-3: 0 / 355 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 39 = 0.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 15 = 0.0
+     Strongly Type-3: 0 / 12 = 0.0
+    Moderatly Type-3: 0 / 156 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 3 / 1445 = 0.0020761245674740486
+              Type-2: 0 / 25 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 25 = 0.0
+Very-Strongly Type-3: 0 / 694 = 0.0
+     Strongly Type-3: 0 / 132 = 0.0
+    Moderatly Type-3: 0 / 199 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 191 = 0.0
+[55,60]: 0 / 67 = 0.0
+[60,65]: 0 / 83 = 0.0
+[65,70]: 0 / 14 = 0.0
+[70,75]: 0 / 21 = 0.0
+[75,80]: 0 / 27 = 0.0
+[80,85]: 0 / 54 = 0.0
+[85,90]: 0 / 42 = 0.0
+[90,95]: 0 / 89 = 0.0
+[95,100]: 0 / 620 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 105 = 0.0
+[55,60]: 0 / 26 = 0.0
+[60,65]: 0 / 20 = 0.0
+[65,70]: 0 / 5 = 0.0
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 12 = 0.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 13 = 0.0
+[95,100]: 0 / 2 = 0.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 86 = 0.0
+[55,60]: 0 / 41 = 0.0
+[60,65]: 0 / 63 = 0.0
+[65,70]: 0 / 9 = 0.0
+[70,75]: 0 / 21 = 0.0
+[75,80]: 0 / 27 = 0.0
+[80,85]: 0 / 42 = 0.0
+[85,90]: 0 / 42 = 0.0
+[90,95]: 0 / 76 = 0.0
+[95,100]: 0 / 618 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 1208 = 0.0
+[55,100]: 0 / 1017 = 0.0
+[60,100]: 0 / 950 = 0.0
+[65,100]: 0 / 867 = 0.0
+[70,100]: 0 / 853 = 0.0
+[75,100]: 0 / 832 = 0.0
+[80,100]: 0 / 805 = 0.0
+[85,100]: 0 / 751 = 0.0
+[90,100]: 0 / 709 = 0.0
+[95,100]: 0 / 620 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 183 = 0.0
+[55,100]: 0 / 78 = 0.0
+[60,100]: 0 / 52 = 0.0
+[65,100]: 0 / 32 = 0.0
+[70,100]: 0 / 27 = 0.0
+[75,100]: 0 / 27 = 0.0
+[80,100]: 0 / 27 = 0.0
+[85,100]: 0 / 15 = 0.0
+[90,100]: 0 / 15 = 0.0
+[95,100]: 0 / 2 = 0.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 1025 = 0.0
+[55,100]: 0 / 939 = 0.0
+[60,100]: 0 / 898 = 0.0
+[65,100]: 0 / 835 = 0.0
+[70,100]: 0 / 826 = 0.0
+[75,100]: 0 / 805 = 0.0
+[80,100]: 0 / 778 = 0.0
+[85,100]: 0 / 736 = 0.0
+[90,100]: 0 / 694 = 0.0
+[95,100]: 0 / 618 = 0.0
+
+================================================================================
+Functionality
+  id: 35
+name: Instantiate Using Reflection
+desc: 1 - Get class object (reflection or passed in somehow) 2 - Use reflection to find the constructor. 3 - Use the constructor to instantiate the object.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 233 = 0.0
+              Type-2: 0 / 38 = 0.0
+      Type-2 (blind): 0 / 1 = 0.0
+ Type-2 (consistent): 0 / 37 = 0.0
+Very-Strongly Type-3: 0 / 346 = 0.0
+     Strongly Type-3: 0 / 44 = 0.0
+    Moderatly Type-3: 0 / 252 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 52 = 0.0
+              Type-2: 0 / 24 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 24 = 0.0
+Very-Strongly Type-3: 0 / 45 = 0.0
+     Strongly Type-3: 0 / 2 = 0.0
+    Moderatly Type-3: 0 / 210 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 181 = 0.0
+              Type-2: 0 / 14 = 0.0
+      Type-2 (blind): 0 / 1 = 0.0
+ Type-2 (consistent): 0 / 13 = 0.0
+Very-Strongly Type-3: 0 / 301 = 0.0
+     Strongly Type-3: 0 / 42 = 0.0
+    Moderatly Type-3: 0 / 42 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 155 = 0.0
+[55,60]: 0 / 38 = 0.0
+[60,65]: 0 / 50 = 0.0
+[65,70]: 0 / 9 = 0.0
+[70,75]: 0 / 10 = 0.0
+[75,80]: 0 / 3 = 0.0
+[80,85]: 0 / 13 = 0.0
+[85,90]: 0 / 18 = 0.0
+[90,95]: 0 / 39 = 0.0
+[95,100]: 0 / 307 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 149 = 0.0
+[55,60]: 0 / 32 = 0.0
+[60,65]: 0 / 27 = 0.0
+[65,70]: 0 / 2 = 0.0
+[70,75]: 0 / 1 = 0.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 1 = 0.0
+[90,95]: 0 / 13 = 0.0
+[95,100]: 0 / 32 = 0.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 6 = 0.0
+[55,60]: 0 / 6 = 0.0
+[60,65]: 0 / 23 = 0.0
+[65,70]: 0 / 7 = 0.0
+[70,75]: 0 / 9 = 0.0
+[75,80]: 0 / 3 = 0.0
+[80,85]: 0 / 13 = 0.0
+[85,90]: 0 / 17 = 0.0
+[90,95]: 0 / 26 = 0.0
+[95,100]: 0 / 275 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 642 = 0.0
+[55,100]: 0 / 487 = 0.0
+[60,100]: 0 / 449 = 0.0
+[65,100]: 0 / 399 = 0.0
+[70,100]: 0 / 390 = 0.0
+[75,100]: 0 / 380 = 0.0
+[80,100]: 0 / 377 = 0.0
+[85,100]: 0 / 364 = 0.0
+[90,100]: 0 / 346 = 0.0
+[95,100]: 0 / 307 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 257 = 0.0
+[55,100]: 0 / 108 = 0.0
+[60,100]: 0 / 76 = 0.0
+[65,100]: 0 / 49 = 0.0
+[70,100]: 0 / 47 = 0.0
+[75,100]: 0 / 46 = 0.0
+[80,100]: 0 / 46 = 0.0
+[85,100]: 0 / 46 = 0.0
+[90,100]: 0 / 45 = 0.0
+[95,100]: 0 / 32 = 0.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 385 = 0.0
+[55,100]: 0 / 379 = 0.0
+[60,100]: 0 / 373 = 0.0
+[65,100]: 0 / 350 = 0.0
+[70,100]: 0 / 343 = 0.0
+[75,100]: 0 / 334 = 0.0
+[80,100]: 0 / 331 = 0.0
+[85,100]: 0 / 318 = 0.0
+[90,100]: 0 / 301 = 0.0
+[95,100]: 0 / 275 = 0.0
+
+================================================================================
+Functionality
+  id: 36
+name: Connect to Database
+desc: Create a database connection.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 89 / 89 = 1.0
+              Type-2: 34 / 34 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 34 / 34 = 1.0
+Very-Strongly Type-3: 41 / 41 = 1.0
+     Strongly Type-3: 279 / 279 = 1.0
+    Moderatly Type-3: 31 / 69 = 0.4492753623188406
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 8 / 8 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 11 / 45 = 0.24444444444444444
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 81 / 81 = 1.0
+              Type-2: 34 / 34 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 34 / 34 = 1.0
+Very-Strongly Type-3: 41 / 41 = 1.0
+     Strongly Type-3: 279 / 279 = 1.0
+    Moderatly Type-3: 20 / 24 = 0.8333333333333334
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 8 / 40 = 0.2
+[55,60]: 1 / 5 = 0.2
+[60,65]: 9 / 10 = 0.9
+[65,70]: 13 / 14 = 0.9285714285714286
+[70,75]: 163 / 163 = 1.0
+[75,80]: 113 / 113 = 1.0
+[80,85]: 2 / 2 = 1.0
+[85,90]: 1 / 1 = 1.0
+[90,95]: 41 / 41 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 6 / 38 = 0.15789473684210525
+[55,60]: 0 / 1 = 0.0
+[60,65]: 0 / 1 = 0.0
+[65,70]: 5 / 5 = 1.0
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 2 / 2 = 1.0
+[55,60]: 1 / 4 = 0.25
+[60,65]: 9 / 9 = 1.0
+[65,70]: 8 / 9 = 0.8888888888888888
+[70,75]: 163 / 163 = 1.0
+[75,80]: 113 / 113 = 1.0
+[80,85]: 2 / 2 = 1.0
+[85,90]: 1 / 1 = 1.0
+[90,95]: 41 / 41 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 351 / 389 = 0.9023136246786633
+[55,100]: 343 / 349 = 0.9828080229226361
+[60,100]: 342 / 344 = 0.9941860465116279
+[65,100]: 333 / 334 = 0.9970059880239521
+[70,100]: 320 / 320 = 1.0
+[75,100]: 157 / 157 = 1.0
+[80,100]: 44 / 44 = 1.0
+[85,100]: 42 / 42 = 1.0
+[90,100]: 41 / 41 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 11 / 45 = 0.24444444444444444
+[55,100]: 5 / 7 = 0.7142857142857143
+[60,100]: 5 / 6 = 0.8333333333333334
+[65,100]: 5 / 5 = 1.0
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 340 / 344 = 0.9883720930232558
+[55,100]: 338 / 342 = 0.9883040935672515
+[60,100]: 337 / 338 = 0.9970414201183432
+[65,100]: 328 / 329 = 0.9969604863221885
+[70,100]: 320 / 320 = 1.0
+[75,100]: 157 / 157 = 1.0
+[80,100]: 44 / 44 = 1.0
+[85,100]: 42 / 42 = 1.0
+[90,100]: 41 / 41 = 1.0
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 37
+name: Load File into Byte Array
+desc: The entire file is loaded into a single byte array.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 42 = 0.0
+              Type-2: 0 / 3 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 3 = 0.0
+Very-Strongly Type-3: 0 / 17 = 0.0
+     Strongly Type-3: 0 / 56 = 0.0
+    Moderatly Type-3: 0 / 192 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 15 = 0.0
+              Type-2: 0 / 2 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 2 = 0.0
+Very-Strongly Type-3: 0 / 6 = 0.0
+     Strongly Type-3: 0 / 39 = 0.0
+    Moderatly Type-3: 0 / 192 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 27 = 0.0
+              Type-2: 0 / 1 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 1 = 0.0
+Very-Strongly Type-3: 0 / 11 = 0.0
+     Strongly Type-3: 0 / 17 = 0.0
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 138 = 0.0
+[55,60]: 0 / 35 = 0.0
+[60,65]: 0 / 13 = 0.0
+[65,70]: 0 / 6 = 0.0
+[70,75]: 0 / 10 = 0.0
+[75,80]: 0 / 18 = 0.0
+[80,85]: 0 / 26 = 0.0
+[85,90]: 0 / 2 = 0.0
+[90,95]: 0 / 14 = 0.0
+[95,100]: 0 / 3 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 138 = 0.0
+[55,60]: 0 / 35 = 0.0
+[60,65]: 0 / 13 = 0.0
+[65,70]: 0 / 6 = 0.0
+[70,75]: 0 / 10 = 0.0
+[75,80]: 0 / 17 = 0.0
+[80,85]: 0 / 10 = 0.0
+[85,90]: 0 / 2 = 0.0
+[90,95]: 0 / 6 = 0.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 1 = 0.0
+[80,85]: 0 / 16 = 0.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 8 = 0.0
+[95,100]: 0 / 3 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 265 = 0.0
+[55,100]: 0 / 127 = 0.0
+[60,100]: 0 / 92 = 0.0
+[65,100]: 0 / 79 = 0.0
+[70,100]: 0 / 73 = 0.0
+[75,100]: 0 / 63 = 0.0
+[80,100]: 0 / 45 = 0.0
+[85,100]: 0 / 19 = 0.0
+[90,100]: 0 / 17 = 0.0
+[95,100]: 0 / 3 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 237 = 0.0
+[55,100]: 0 / 99 = 0.0
+[60,100]: 0 / 64 = 0.0
+[65,100]: 0 / 51 = 0.0
+[70,100]: 0 / 45 = 0.0
+[75,100]: 0 / 35 = 0.0
+[80,100]: 0 / 18 = 0.0
+[85,100]: 0 / 8 = 0.0
+[90,100]: 0 / 6 = 0.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 28 = 0.0
+[55,100]: 0 / 28 = 0.0
+[60,100]: 0 / 28 = 0.0
+[65,100]: 0 / 28 = 0.0
+[70,100]: 0 / 28 = 0.0
+[75,100]: 0 / 28 = 0.0
+[80,100]: 0 / 27 = 0.0
+[85,100]: 0 / 11 = 0.0
+[90,100]: 0 / 11 = 0.0
+[95,100]: 0 / 3 = 0.0
+
+================================================================================
+Functionality
+  id: 38
+name: Get MAC Address String
+desc: 1 - Get the MAC address (of a network device, of a ip address, of local host, etc). 2 - Convert byte MAC address into standard format: (e.g., 1-23-45-67-89-ab or 01:23:45:67:89:ab)
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 1 / 1 = 1.0
+    Moderatly Type-3: 0 / 4 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 2 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 1 / 1 = 1.0
+    Moderatly Type-3: 0 / 2 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 2 = 0.0
+[55,60]: 0 / 2 = 0.0
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 1 / 1 = 1.0
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 2 = 0.0
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 2 = 0.0
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 1 / 1 = 1.0
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 1 / 5 = 0.2
+[55,100]: 1 / 3 = 0.3333333333333333
+[60,100]: 1 / 1 = 1.0
+[65,100]: 1 / 1 = 1.0
+[70,100]: 1 / 1 = 1.0
+[75,100]: 1 / 1 = 1.0
+[80,100]: 1 / 1 = 1.0
+[85,100]: 1 / 1 = 1.0
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 2 = 0.0
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 1 / 3 = 0.3333333333333333
+[55,100]: 1 / 3 = 0.3333333333333333
+[60,100]: 1 / 1 = 1.0
+[65,100]: 1 / 1 = 1.0
+[70,100]: 1 / 1 = 1.0
+[75,100]: 1 / 1 = 1.0
+[80,100]: 1 / 1 = 1.0
+[85,100]: 1 / 1 = 1.0
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 39
+name: Delete Folder and Contents
+desc: Delete a folder, and all the files and folders it contains, recursively down the file heirarchy.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 68 = 0.0
+              Type-2: 0 / 24 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 24 = 0.0
+Very-Strongly Type-3: 0 / 115 = 0.0
+     Strongly Type-3: 0 / 233 = 0.0
+    Moderatly Type-3: 0 / 1506 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 58 = 0.0
+              Type-2: 0 / 24 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 24 = 0.0
+Very-Strongly Type-3: 0 / 109 = 0.0
+     Strongly Type-3: 0 / 231 = 0.0
+    Moderatly Type-3: 0 / 1499 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 10 = 0.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 6 = 0.0
+     Strongly Type-3: 0 / 2 = 0.0
+    Moderatly Type-3: 0 / 7 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 735 = 0.0
+[55,60]: 0 / 308 = 0.0
+[60,65]: 0 / 352 = 0.0
+[65,70]: 0 / 111 = 0.0
+[70,75]: 0 / 106 = 0.0
+[75,80]: 0 / 91 = 0.0
+[80,85]: 0 / 22 = 0.0
+[85,90]: 0 / 14 = 0.0
+[90,95]: 0 / 115 = 0.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 731 = 0.0
+[55,60]: 0 / 306 = 0.0
+[60,65]: 0 / 352 = 0.0
+[65,70]: 0 / 110 = 0.0
+[70,75]: 0 / 105 = 0.0
+[75,80]: 0 / 91 = 0.0
+[80,85]: 0 / 21 = 0.0
+[85,90]: 0 / 14 = 0.0
+[90,95]: 0 / 109 = 0.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 4 = 0.0
+[55,60]: 0 / 2 = 0.0
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 1 = 0.0
+[70,75]: 0 / 1 = 0.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 1 = 0.0
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 6 = 0.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 1854 = 0.0
+[55,100]: 0 / 1119 = 0.0
+[60,100]: 0 / 811 = 0.0
+[65,100]: 0 / 459 = 0.0
+[70,100]: 0 / 348 = 0.0
+[75,100]: 0 / 242 = 0.0
+[80,100]: 0 / 151 = 0.0
+[85,100]: 0 / 129 = 0.0
+[90,100]: 0 / 115 = 0.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 1839 = 0.0
+[55,100]: 0 / 1108 = 0.0
+[60,100]: 0 / 802 = 0.0
+[65,100]: 0 / 450 = 0.0
+[70,100]: 0 / 340 = 0.0
+[75,100]: 0 / 235 = 0.0
+[80,100]: 0 / 144 = 0.0
+[85,100]: 0 / 123 = 0.0
+[90,100]: 0 / 109 = 0.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 15 = 0.0
+[55,100]: 0 / 11 = 0.0
+[60,100]: 0 / 9 = 0.0
+[65,100]: 0 / 9 = 0.0
+[70,100]: 0 / 8 = 0.0
+[75,100]: 0 / 7 = 0.0
+[80,100]: 0 / 7 = 0.0
+[85,100]: 0 / 6 = 0.0
+[90,100]: 0 / 6 = 0.0
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 40
+name: Parse CSV File
+desc: Parse the elements of a CSV-like file.  Where each line is an entry, and the elements of an entry are separated by some delimiter on that line (CSV, tab delimited, etc).
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 482 / 482 = 1.0
+              Type-2: 9 / 9 = 1.0
+      Type-2 (blind): 7 / 7 = 1.0
+ Type-2 (consistent): 2 / 2 = 1.0
+Very-Strongly Type-3: 236 / 236 = 1.0
+     Strongly Type-3: 497 / 497 = 1.0
+    Moderatly Type-3: 435 / 454 = 0.9581497797356828
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 482 / 482 = 1.0
+              Type-2: 9 / 9 = 1.0
+      Type-2 (blind): 7 / 7 = 1.0
+ Type-2 (consistent): 2 / 2 = 1.0
+Very-Strongly Type-3: 236 / 236 = 1.0
+     Strongly Type-3: 497 / 497 = 1.0
+    Moderatly Type-3: 435 / 454 = 0.9581497797356828
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 185 / 185 = 1.0
+[55,60]: 128 / 139 = 0.920863309352518
+[60,65]: 37 / 45 = 0.8222222222222222
+[65,70]: 85 / 85 = 1.0
+[70,75]: 152 / 152 = 1.0
+[75,80]: 100 / 100 = 1.0
+[80,85]: 121 / 121 = 1.0
+[85,90]: 124 / 124 = 1.0
+[90,95]: 177 / 177 = 1.0
+[95,100]: 59 / 59 = 1.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 185 / 185 = 1.0
+[55,60]: 128 / 139 = 0.920863309352518
+[60,65]: 37 / 45 = 0.8222222222222222
+[65,70]: 85 / 85 = 1.0
+[70,75]: 152 / 152 = 1.0
+[75,80]: 100 / 100 = 1.0
+[80,85]: 121 / 121 = 1.0
+[85,90]: 124 / 124 = 1.0
+[90,95]: 177 / 177 = 1.0
+[95,100]: 59 / 59 = 1.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 1168 / 1187 = 0.9839932603201348
+[55,100]: 983 / 1002 = 0.9810379241516967
+[60,100]: 855 / 863 = 0.9907300115874855
+[65,100]: 818 / 818 = 1.0
+[70,100]: 733 / 733 = 1.0
+[75,100]: 581 / 581 = 1.0
+[80,100]: 481 / 481 = 1.0
+[85,100]: 360 / 360 = 1.0
+[90,100]: 236 / 236 = 1.0
+[95,100]: 59 / 59 = 1.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 0 = NaN
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 1168 / 1187 = 0.9839932603201348
+[55,100]: 983 / 1002 = 0.9810379241516967
+[60,100]: 855 / 863 = 0.9907300115874855
+[65,100]: 818 / 818 = 1.0
+[70,100]: 733 / 733 = 1.0
+[75,100]: 581 / 581 = 1.0
+[80,100]: 481 / 481 = 1.0
+[85,100]: 360 / 360 = 1.0
+[90,100]: 236 / 236 = 1.0
+[95,100]: 59 / 59 = 1.0
+
+================================================================================
+Functionality
+  id: 41
+name: Transpose a Matrix.
+desc: Transpose a Matrix (2d array)
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 396 = 0.0
+              Type-2: 0 / 23 = 0.0
+      Type-2 (blind): 0 / 1 = 0.0
+ Type-2 (consistent): 0 / 22 = 0.0
+Very-Strongly Type-3: 0 / 171 = 0.0
+     Strongly Type-3: 0 / 329 = 0.0
+    Moderatly Type-3: 0 / 3305 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 364 = 0.0
+              Type-2: 0 / 4 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 4 = 0.0
+Very-Strongly Type-3: 0 / 146 = 0.0
+     Strongly Type-3: 0 / 273 = 0.0
+    Moderatly Type-3: 0 / 3230 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 32 = 0.0
+              Type-2: 0 / 19 = 0.0
+      Type-2 (blind): 0 / 1 = 0.0
+ Type-2 (consistent): 0 / 18 = 0.0
+Very-Strongly Type-3: 0 / 25 = 0.0
+     Strongly Type-3: 0 / 56 = 0.0
+    Moderatly Type-3: 0 / 75 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 1330 = 0.0
+[55,60]: 0 / 705 = 0.0
+[60,65]: 0 / 465 = 0.0
+[65,70]: 0 / 805 = 0.0
+[70,75]: 0 / 43 = 0.0
+[75,80]: 0 / 189 = 0.0
+[80,85]: 0 / 85 = 0.0
+[85,90]: 0 / 12 = 0.0
+[90,95]: 0 / 147 = 0.0
+[95,100]: 0 / 24 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 1286 = 0.0
+[55,60]: 0 / 689 = 0.0
+[60,65]: 0 / 454 = 0.0
+[65,70]: 0 / 801 = 0.0
+[70,75]: 0 / 41 = 0.0
+[75,80]: 0 / 161 = 0.0
+[80,85]: 0 / 67 = 0.0
+[85,90]: 0 / 4 = 0.0
+[90,95]: 0 / 135 = 0.0
+[95,100]: 0 / 11 = 0.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 44 = 0.0
+[55,60]: 0 / 16 = 0.0
+[60,65]: 0 / 11 = 0.0
+[65,70]: 0 / 4 = 0.0
+[70,75]: 0 / 2 = 0.0
+[75,80]: 0 / 28 = 0.0
+[80,85]: 0 / 18 = 0.0
+[85,90]: 0 / 8 = 0.0
+[90,95]: 0 / 12 = 0.0
+[95,100]: 0 / 13 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 3805 = 0.0
+[55,100]: 0 / 2475 = 0.0
+[60,100]: 0 / 1770 = 0.0
+[65,100]: 0 / 1305 = 0.0
+[70,100]: 0 / 500 = 0.0
+[75,100]: 0 / 457 = 0.0
+[80,100]: 0 / 268 = 0.0
+[85,100]: 0 / 183 = 0.0
+[90,100]: 0 / 171 = 0.0
+[95,100]: 0 / 24 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 3649 = 0.0
+[55,100]: 0 / 2363 = 0.0
+[60,100]: 0 / 1674 = 0.0
+[65,100]: 0 / 1220 = 0.0
+[70,100]: 0 / 419 = 0.0
+[75,100]: 0 / 378 = 0.0
+[80,100]: 0 / 217 = 0.0
+[85,100]: 0 / 150 = 0.0
+[90,100]: 0 / 146 = 0.0
+[95,100]: 0 / 11 = 0.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 156 = 0.0
+[55,100]: 0 / 112 = 0.0
+[60,100]: 0 / 96 = 0.0
+[65,100]: 0 / 85 = 0.0
+[70,100]: 0 / 81 = 0.0
+[75,100]: 0 / 79 = 0.0
+[80,100]: 0 / 51 = 0.0
+[85,100]: 0 / 33 = 0.0
+[90,100]: 0 / 25 = 0.0
+[95,100]: 0 / 13 = 0.0
+
+================================================================================
+Functionality
+  id: 42
+name: Extract Matches Using Regex
+desc: Use a regular expression to extract matches of a pattern in text.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 47 = 0.0
+              Type-2: 0 / 21 = 0.0
+      Type-2 (blind): 0 / 2 = 0.0
+ Type-2 (consistent): 0 / 19 = 0.0
+Very-Strongly Type-3: 0 / 20 = 0.0
+     Strongly Type-3: 0 / 45 = 0.0
+    Moderatly Type-3: 0 / 273 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 14 = 0.0
+              Type-2: 0 / 2 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 2 = 0.0
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 10 = 0.0
+    Moderatly Type-3: 0 / 223 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 33 = 0.0
+              Type-2: 0 / 19 = 0.0
+      Type-2 (blind): 0 / 2 = 0.0
+ Type-2 (consistent): 0 / 17 = 0.0
+Very-Strongly Type-3: 0 / 20 = 0.0
+     Strongly Type-3: 0 / 35 = 0.0
+    Moderatly Type-3: 0 / 50 = 0.0
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 188 = 0.0
+[55,60]: 0 / 56 = 0.0
+[60,65]: 0 / 13 = 0.0
+[65,70]: 0 / 16 = 0.0
+[70,75]: 0 / 9 = 0.0
+[75,80]: 0 / 12 = 0.0
+[80,85]: 0 / 10 = 0.0
+[85,90]: 0 / 14 = 0.0
+[90,95]: 0 / 11 = 0.0
+[95,100]: 0 / 9 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 165 = 0.0
+[55,60]: 0 / 40 = 0.0
+[60,65]: 0 / 9 = 0.0
+[65,70]: 0 / 9 = 0.0
+[70,75]: 0 / 6 = 0.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 4 = 0.0
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 23 = 0.0
+[55,60]: 0 / 16 = 0.0
+[60,65]: 0 / 4 = 0.0
+[65,70]: 0 / 7 = 0.0
+[70,75]: 0 / 3 = 0.0
+[75,80]: 0 / 12 = 0.0
+[80,85]: 0 / 10 = 0.0
+[85,90]: 0 / 10 = 0.0
+[90,95]: 0 / 11 = 0.0
+[95,100]: 0 / 9 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 338 = 0.0
+[55,100]: 0 / 150 = 0.0
+[60,100]: 0 / 94 = 0.0
+[65,100]: 0 / 81 = 0.0
+[70,100]: 0 / 65 = 0.0
+[75,100]: 0 / 56 = 0.0
+[80,100]: 0 / 44 = 0.0
+[85,100]: 0 / 34 = 0.0
+[90,100]: 0 / 20 = 0.0
+[95,100]: 0 / 9 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 233 = 0.0
+[55,100]: 0 / 68 = 0.0
+[60,100]: 0 / 28 = 0.0
+[65,100]: 0 / 19 = 0.0
+[70,100]: 0 / 10 = 0.0
+[75,100]: 0 / 4 = 0.0
+[80,100]: 0 / 4 = 0.0
+[85,100]: 0 / 4 = 0.0
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 105 = 0.0
+[55,100]: 0 / 82 = 0.0
+[60,100]: 0 / 66 = 0.0
+[65,100]: 0 / 62 = 0.0
+[70,100]: 0 / 55 = 0.0
+[75,100]: 0 / 52 = 0.0
+[80,100]: 0 / 40 = 0.0
+[85,100]: 0 / 30 = 0.0
+[90,100]: 0 / 20 = 0.0
+[95,100]: 0 / 9 = 0.0
+
+================================================================================
+Functionality
+  id: 43
+name: Copy Directory
+desc: Copy directory and its contents.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 0 / 3 = 0.0
+              Type-2: 0 / 4 = 0.0
+      Type-2 (blind): 0 / 1 = 0.0
+ Type-2 (consistent): 0 / 3 = 0.0
+Very-Strongly Type-3: 0 / 17 = 0.0
+     Strongly Type-3: 0 / 164 = 0.0
+    Moderatly Type-3: 0 / 373 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 3 = 0.0
+              Type-2: 0 / 2 = 0.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 2 = 0.0
+Very-Strongly Type-3: 0 / 14 = 0.0
+     Strongly Type-3: 0 / 159 = 0.0
+    Moderatly Type-3: 0 / 373 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 2 = 0.0
+      Type-2 (blind): 0 / 1 = 0.0
+ Type-2 (consistent): 0 / 1 = 0.0
+Very-Strongly Type-3: 0 / 3 = 0.0
+     Strongly Type-3: 0 / 5 = 0.0
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 147 = 0.0
+[55,60]: 0 / 105 = 0.0
+[60,65]: 0 / 57 = 0.0
+[65,70]: 0 / 64 = 0.0
+[70,75]: 0 / 93 = 0.0
+[75,80]: 0 / 39 = 0.0
+[80,85]: 0 / 15 = 0.0
+[85,90]: 0 / 17 = 0.0
+[90,95]: 0 / 14 = 0.0
+[95,100]: 0 / 3 = 0.0
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 147 = 0.0
+[55,60]: 0 / 105 = 0.0
+[60,65]: 0 / 57 = 0.0
+[65,70]: 0 / 64 = 0.0
+[70,75]: 0 / 93 = 0.0
+[75,80]: 0 / 38 = 0.0
+[80,85]: 0 / 13 = 0.0
+[85,90]: 0 / 15 = 0.0
+[90,95]: 0 / 12 = 0.0
+[95,100]: 0 / 2 = 0.0
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 1 = 0.0
+[80,85]: 0 / 2 = 0.0
+[85,90]: 0 / 2 = 0.0
+[90,95]: 0 / 2 = 0.0
+[95,100]: 0 / 1 = 0.0
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 554 = 0.0
+[55,100]: 0 / 407 = 0.0
+[60,100]: 0 / 302 = 0.0
+[65,100]: 0 / 245 = 0.0
+[70,100]: 0 / 181 = 0.0
+[75,100]: 0 / 88 = 0.0
+[80,100]: 0 / 49 = 0.0
+[85,100]: 0 / 34 = 0.0
+[90,100]: 0 / 17 = 0.0
+[95,100]: 0 / 3 = 0.0
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 546 = 0.0
+[55,100]: 0 / 399 = 0.0
+[60,100]: 0 / 294 = 0.0
+[65,100]: 0 / 237 = 0.0
+[70,100]: 0 / 173 = 0.0
+[75,100]: 0 / 80 = 0.0
+[80,100]: 0 / 42 = 0.0
+[85,100]: 0 / 29 = 0.0
+[90,100]: 0 / 14 = 0.0
+[95,100]: 0 / 2 = 0.0
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 8 = 0.0
+[55,100]: 0 / 8 = 0.0
+[60,100]: 0 / 8 = 0.0
+[65,100]: 0 / 8 = 0.0
+[70,100]: 0 / 8 = 0.0
+[75,100]: 0 / 8 = 0.0
+[80,100]: 0 / 7 = 0.0
+[85,100]: 0 / 5 = 0.0
+[90,100]: 0 / 3 = 0.0
+[95,100]: 0 / 1 = 0.0
+
+================================================================================
+Functionality
+  id: 44
+name: Test Palindrome
+desc: Test if a string is a palindrome.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 1 / 1 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 4 = 0.0
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 4 = 0.0
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 1 / 1 = 1.0
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 0 / 0 = NaN
+    Moderatly Type-3: 0 / 0 = NaN
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 0 / 2 = 0.0
+[55,60]: 0 / 2 = 0.0
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 0 / 2 = 0.0
+[55,60]: 0 / 2 = 0.0
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 0 / 0 = NaN
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 0 = NaN
+[65,70]: 0 / 0 = NaN
+[70,75]: 0 / 0 = NaN
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 0 / 4 = 0.0
+[55,100]: 0 / 2 = 0.0
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 4 = 0.0
+[55,100]: 0 / 2 = 0.0
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 0 / 0 = NaN
+[55,100]: 0 / 0 = NaN
+[60,100]: 0 / 0 = NaN
+[65,100]: 0 / 0 = NaN
+[70,100]: 0 / 0 = NaN
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+================================================================================
+Functionality
+  id: 45
+name: Write PDF File
+desc: Writes a PDF file.
+================================================================================
+-- Recall Per Clone Type (type: numDetected / numClones = recall) --
+              Type-1: 1 / 1 = 1.0
+              Type-2: 3 / 3 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 3 / 3 = 1.0
+Very-Strongly Type-3: 2 / 2 = 1.0
+     Strongly Type-3: 57 / 69 = 0.8260869565217391
+    Moderatly Type-3: 151 / 515 = 0.29320388349514565
+
+-- Inter-Project Recall Per Clone Type (type: numDetected / numClones = recall)  --
+              Type-1: 0 / 0 = NaN
+              Type-2: 0 / 0 = NaN
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 0 / 0 = NaN
+Very-Strongly Type-3: 0 / 0 = NaN
+     Strongly Type-3: 1 / 1 = 1.0
+    Moderatly Type-3: 1 / 13 = 0.07692307692307693
+
+-- Intra-Project Recall Per Clone Type (type: numDetected / numClones = recall) --
+-- Recall Per Clone Type --
+              Type-1: 1 / 1 = 1.0
+              Type-2: 3 / 3 = 1.0
+      Type-2 (blind): 0 / 0 = NaN
+ Type-2 (consistent): 3 / 3 = 1.0
+Very-Strongly Type-3: 2 / 2 = 1.0
+     Strongly Type-3: 56 / 68 = 0.8235294117647058
+    Moderatly Type-3: 150 / 502 = 0.29880478087649404
+
+-- Type-3 Recall per 5% Region ([start,end]: numDetected / numClones = recall)  --
+[50,55]: 33 / 194 = 0.17010309278350516
+[55,60]: 42 / 141 = 0.2978723404255319
+[60,65]: 47 / 120 = 0.39166666666666666
+[65,70]: 29 / 60 = 0.48333333333333334
+[70,75]: 27 / 36 = 0.75
+[75,80]: 10 / 13 = 0.7692307692307693
+[80,85]: 13 / 13 = 1.0
+[85,90]: 7 / 7 = 1.0
+[90,95]: 2 / 2 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall per 5% Region--
+[50,55]: 1 / 10 = 0.1
+[55,60]: 0 / 0 = NaN
+[60,65]: 0 / 3 = 0.0
+[65,70]: 0 / 0 = NaN
+[70,75]: 1 / 1 = 1.0
+[75,80]: 0 / 0 = NaN
+[80,85]: 0 / 0 = NaN
+[85,90]: 0 / 0 = NaN
+[90,95]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall per 5% Region--
+[50,55]: 32 / 184 = 0.17391304347826086
+[55,60]: 42 / 141 = 0.2978723404255319
+[60,65]: 47 / 117 = 0.4017094017094017
+[65,70]: 29 / 60 = 0.48333333333333334
+[70,75]: 26 / 35 = 0.7428571428571429
+[75,80]: 10 / 13 = 0.7692307692307693
+[80,85]: 13 / 13 = 1.0
+[85,90]: 7 / 7 = 1.0
+[90,95]: 2 / 2 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Recall Per Minimum Similarity --
+[50,100]: 210 / 586 = 0.3583617747440273
+[55,100]: 177 / 392 = 0.45153061224489793
+[60,100]: 135 / 251 = 0.5378486055776892
+[65,100]: 88 / 131 = 0.6717557251908397
+[70,100]: 59 / 71 = 0.8309859154929577
+[75,100]: 32 / 35 = 0.9142857142857143
+[80,100]: 22 / 22 = 1.0
+[85,100]: 9 / 9 = 1.0
+[90,100]: 2 / 2 = 1.0
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Inter-Project Recall Per Minimum Similarity --
+[50,100]: 2 / 14 = 0.14285714285714285
+[55,100]: 1 / 4 = 0.25
+[60,100]: 1 / 4 = 0.25
+[65,100]: 1 / 1 = 1.0
+[70,100]: 1 / 1 = 1.0
+[75,100]: 0 / 0 = NaN
+[80,100]: 0 / 0 = NaN
+[85,100]: 0 / 0 = NaN
+[90,100]: 0 / 0 = NaN
+[95,100]: 0 / 0 = NaN
+
+-- Type-3 Intra-Project Recall Per Minimum Similarity --
+[50,100]: 208 / 572 = 0.36363636363636365
+[55,100]: 176 / 388 = 0.4536082474226804
+[60,100]: 134 / 247 = 0.5425101214574899
+[65,100]: 87 / 130 = 0.6692307692307692
+[70,100]: 58 / 70 = 0.8285714285714286
+[75,100]: 32 / 35 = 0.9142857142857143
+[80,100]: 22 / 22 = 1.0
+[85,100]: 9 / 9 = 1.0
+[90,100]: 2 / 2 = 1.0
+[95,100]: 0 / 0 = NaN
+
